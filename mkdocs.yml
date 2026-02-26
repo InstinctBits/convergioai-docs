@@ -1,0 +1,242 @@
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
+
+# ---------------------------------------------------------------------------- #
+#                         Convergio AI Documentation                           #
+#         A Digitech Nomads Project | Produced by Instinct Bits Lab            #
+# ---------------------------------------------------------------------------- #
+
+# -- Site metadata -----------------------------------------------------------
+
+site_name: Convergio AI
+site_url: https://docs.instinctbits.com/
+site_author: Instinct Bits Lab
+site_description: >-
+  Official documentation for Convergio AI — an API-first platform
+  for intelligent convergence. Architecture, APIs, setup guides,
+  and developer reference.
+
+# -- Repository ---------------------------------------------------------------
+
+repo_name: InstinctBits/convergioai
+repo_url: https://github.com/InstinctBits/convergioai
+edit_uri: https://github.com/InstinctBits/convergioai-docs/edit/main/docs/
+
+# -- Copyright ----------------------------------------------------------------
+
+copyright: >-
+  Copyright &copy; 2026 <a href="https://digitechnomads.com" target="_blank">Digitech Nomads</a>.
+  Produced by <a href="https://instinctbits.com" target="_blank">Instinct Bits Lab</a>.
+
+# -- Theme configuration -----------------------------------------------------
+
+theme:
+  name: material
+  language: en
+  custom_dir: overrides
+
+  # Brand identity
+  logo: assets/images/logo.svg
+  favicon: assets/images/favicon.png
+
+  # Color palette with light/dark toggle
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  # Typography
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+  # Theme features
+  features:
+    # Navigation
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.path
+
+    # Search
+    - search.suggest
+    - search.highlight
+    - search.share
+
+    # Content
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.action.edit
+    - content.tooltips
+
+    # Header
+    - header.autohide
+    - announce.dismiss
+
+    # Table of contents
+    - toc.follow
+
+  # Icons
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+
+# -- Plugins ------------------------------------------------------------------
+
+plugins:
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - social
+  - tags
+  - minify:
+      minify_html: true
+
+# -- Extensions ---------------------------------------------------------------
+
+markdown_extensions:
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+  # PyMdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# -- Extra configuration ------------------------------------------------------
+
+extra:
+  # Version selector (mike)
+  version:
+    provider: mike
+    default: stable
+
+  # Social links
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/InstinctBits
+      name: Instinct Bits on GitHub
+    - icon: fontawesome/brands/github
+      link: https://github.com/digitechnomads
+      name: Digitech Nomads on GitHub
+    - icon: fontawesome/solid/globe
+      link: https://instinctbits.com
+      name: Instinct Bits Lab
+    - icon: fontawesome/solid/globe
+      link: https://digitechnomads.com
+      name: Digitech Nomads
+
+  # Analytics (uncomment and configure when ready)
+  # analytics:
+  #   provider: google
+  #   property: G-XXXXXXXXXX
+
+  # Cookie consent (uncomment when analytics are enabled)
+  # consent:
+  #   title: Cookie consent
+  #   description: >-
+  #     We use cookies to recognize your repeated visits and preferences,
+  #     as well as to measure the effectiveness of our documentation and
+  #     whether users find what they're searching for. With your consent,
+  #     you're helping us to make our documentation better.
+
+  # Status indicators for pages
+  status:
+    new: Recently added
+    deprecated: Deprecated
+
+# -- Extra CSS / JS -----------------------------------------------------------
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra_javascript:
+  - assets/javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+# -- Navigation ---------------------------------------------------------------
+
+nav:
+  - Home:
+      - index.md
+
+  - Getting Started:
+      - getting-started/index.md
+      - Quickstart: getting-started/quickstart.md
+      - Installation: getting-started/installation.md
+      - Configuration: getting-started/configuration.md
+
+  - Platform:
+      - platform/index.md
+      - Architecture: platform/architecture.md
+      - Core Concepts: platform/concepts.md
+
+  - API Reference:
+      - api/index.md
+      - Authentication: api/authentication.md
+      - Endpoints: api/endpoints.md
+      - Error Handling: api/errors.md
+      - Rate Limits: api/rate-limits.md
+
+  - Guides:
+      - guides/index.md
+      - Deployment: guides/deployment.md
+      - Best Practices: guides/best-practices.md
+
+  - SDKs:
+      - sdks/index.md
+
+  - Changelog:
+      - changelog.md
