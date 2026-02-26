@@ -13,11 +13,19 @@
          <lastmod>2026-02-26</lastmod>
     </url>
     <url>
+         <loc>https://docs.instinctbits.com/api/ai/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
          <loc>https://docs.instinctbits.com/api/authentication/</loc>
          <lastmod>2026-02-26</lastmod>
     </url>
     <url>
-         <loc>https://docs.instinctbits.com/api/endpoints/</loc>
+         <loc>https://docs.instinctbits.com/api/calendar/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.instinctbits.com/api/emails/</loc>
          <lastmod>2026-02-26</lastmod>
     </url>
     <url>
@@ -25,7 +33,55 @@
          <lastmod>2026-02-26</lastmod>
     </url>
     <url>
-         <loc>https://docs.instinctbits.com/api/rate-limits/</loc>
+         <loc>https://docs.instinctbits.com/api/settings/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.instinctbits.com/api/streamboost/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.instinctbits.com/api/tasks/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.instinctbits.com/development/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.instinctbits.com/development/contributing/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.instinctbits.com/development/design-system/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.instinctbits.com/features/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.instinctbits.com/features/ai-copilot/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.instinctbits.com/features/calendar/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.instinctbits.com/features/digital-audits/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.instinctbits.com/features/email-automation/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.instinctbits.com/features/streamboost/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.instinctbits.com/features/tasks/</loc>
          <lastmod>2026-02-26</lastmod>
     </url>
     <url>
@@ -49,11 +105,27 @@
          <lastmod>2026-02-26</lastmod>
     </url>
     <url>
-         <loc>https://docs.instinctbits.com/guides/best-practices/</loc>
+         <loc>https://docs.instinctbits.com/guides/deployment/</loc>
          <lastmod>2026-02-26</lastmod>
     </url>
     <url>
-         <loc>https://docs.instinctbits.com/guides/deployment/</loc>
+         <loc>https://docs.instinctbits.com/guides/self-hosting/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.instinctbits.com/integrations/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.instinctbits.com/integrations/calcom/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.instinctbits.com/integrations/n8n/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.instinctbits.com/integrations/platforms/</loc>
          <lastmod>2026-02-26</lastmod>
     </url>
     <url>
@@ -69,7 +141,7 @@
          <lastmod>2026-02-26</lastmod>
     </url>
     <url>
-         <loc>https://docs.instinctbits.com/sdks/</loc>
+         <loc>https://docs.instinctbits.com/platform/database/</loc>
          <lastmod>2026-02-26</lastmod>
     </url>
 </urlset>
