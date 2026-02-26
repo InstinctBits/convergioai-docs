@@ -21,16 +21,28 @@
   --md-default-bg-color--light: #161b22;
 }
 
-/* -- Typography refinements ----------------------------------------- */
+/* -- Typography — larger base size ---------------------------------- */
+
+.md-typeset {
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
 
 .md-typeset h1 {
+  font-size: 2em;
   font-weight: 700;
   letter-spacing: -0.02em;
 }
 
 .md-typeset h2 {
+  font-size: 1.5em;
   font-weight: 600;
   letter-spacing: -0.01em;
+}
+
+.md-typeset h3 {
+  font-size: 1.25em;
+  font-weight: 600;
 }
 
 /* -- Grid cards — equal height, refined padding --------------------- */
