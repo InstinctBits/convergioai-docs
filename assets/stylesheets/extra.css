@@ -1,0 +1,94 @@
+/* ------------------------------------------------------------------- */
+/*  Convergio AI — Custom theme overrides                              */
+/*  Extends Material for MkDocs with brand-specific refinements.       */
+/* ------------------------------------------------------------------- */
+
+/* -- Brand color overrides (light mode) ----------------------------- */
+
+:root {
+  --md-primary-fg-color: #1a1a2e;
+  --md-primary-fg-color--light: #16213e;
+  --md-primary-fg-color--dark: #0f0f23;
+  --md-accent-fg-color: #4361ee;
+}
+
+/* -- Brand color overrides (dark mode) ------------------------------ */
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #1a1a2e;
+  --md-accent-fg-color: #7b8cff;
+  --md-default-bg-color: #0d1117;
+  --md-default-bg-color--light: #161b22;
+}
+
+/* -- Typography refinements ----------------------------------------- */
+
+.md-typeset h1 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.md-typeset h2 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* -- Grid cards — equal height, refined padding --------------------- */
+
+.md-typeset .grid.cards > ul > li {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  border-color: var(--md-accent-fg-color);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* -- Code blocks — refined appearance ------------------------------- */
+
+.md-typeset code {
+  border-radius: 4px;
+}
+
+.md-typeset pre > code {
+  border-radius: 8px;
+}
+
+/* -- Footer branding ------------------------------------------------ */
+
+.md-footer-copyright {
+  font-size: 0.7rem;
+}
+
+/* -- Announcement bar ----------------------------------------------- */
+
+.md-banner {
+  background-color: var(--md-accent-fg-color);
+  color: white;
+}
+
+.md-banner a {
+  color: white;
+  text-decoration: underline;
+}
+
+/* -- Status badges -------------------------------------------------- */
+
+.md-status--new::after {
+  background-color: #22c55e;
+}
+
+.md-status--deprecated::after {
+  background-color: #ef4444;
+}
+
+/* -- Smooth scrolling ----------------------------------------------- */
+
+html {
+  scroll-behavior: smooth;
+}
