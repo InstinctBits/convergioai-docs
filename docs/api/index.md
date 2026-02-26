@@ -1,52 +1,59 @@
 ---
 title: API Reference
-description: Complete API reference for Convergio AI — endpoints, authentication, error codes, and rate limits.
+description: Complete REST API reference for Convergio AI — 80+ endpoints across emails, AI, tasks, calendar, streaming, and settings.
 ---
 
 # API Reference
 
-The Convergio AI API is organized around REST. It accepts JSON-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes.
+The Convergio AI API is a REST API built on Express 5. It accepts JSON request bodies and returns JSON responses. Full OpenAPI 3.0.3 documentation is available at `/api-docs` when the server is running.
 
 **Base URL:**
 
 ```
-https://api.convergioai.com/v1
+http://localhost:3001/api
 ```
 
-## Sections
+**Production (via Netlify proxy):**
 
-<div class="grid cards" markdown>
+```
+https://convergioai.netlify.app/api
+```
 
--   :material-key:{ .lg .middle } **Authentication**
+## Authentication
 
-    ---
+Most endpoints use JWT Bearer authentication. See [Authentication](authentication.md) for details.
 
-    API key management and request signing.
+```
+Authorization: Bearer <jwt_token>
+```
 
-    [:octicons-arrow-right-24: Authentication](authentication.md)
+## Endpoint groups
 
--   :material-api:{ .lg .middle } **Endpoints**
+| Section | Endpoints | Auth | Description |
+| ------- | --------- | ---- | ----------- |
+| [Authentication](authentication.md) | 5 | Mixed | Register, login, refresh, logout, profile |
+| [Emails](emails.md) | 4 | No | Email CRUD, AI analysis |
+| [Tasks](tasks.md) | 4 | No | Task management |
+| [AI](ai.md) | 6 | No | Model selection, content generation, chat, intelligence |
+| [Calendar](calendar.md) | 12 | No | Events, Cal.com sync, meeting detection |
+| [Settings](settings.md) | 25+ | JWT | Profile, security, billing, tokens |
+| [StreamBoost](streamboost.md) | 10+ | No | Stream state, captions, credentials, milestones |
+| [Error Handling](errors.md) | — | — | Status codes and error format |
 
-    ---
+## Quick reference
 
-    All available API endpoints with request/response schemas.
+```bash
+# Health check
+curl http://localhost:3001/api/health
 
-    [:octicons-arrow-right-24: Endpoints](endpoints.md)
+# Login
+curl -X POST http://localhost:3001/api/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"email": "demo@digitechnomads.com", "password": "demo123"}'
 
--   :material-alert-circle-outline:{ .lg .middle } **Error Handling**
+# List emails
+curl http://localhost:3001/api/emails?tag=Hello&limit=10
 
-    ---
-
-    Error codes, formats, and retry strategies.
-
-    [:octicons-arrow-right-24: Errors](errors.md)
-
--   :material-speedometer:{ .lg .middle } **Rate Limits**
-
-    ---
-
-    Throughput limits, headers, and best practices.
-
-    [:octicons-arrow-right-24: Rate Limits](rate-limits.md)
-
-</div>
+# Dashboard stats
+curl http://localhost:3001/api/stats
+```

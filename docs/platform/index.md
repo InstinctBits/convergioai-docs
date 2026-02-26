@@ -1,11 +1,11 @@
 ---
 title: Platform
-description: Understand the Convergio AI platform — architecture, core concepts, and design decisions.
+description: Understand the Convergio AI platform — architecture, technology stack, and core concepts.
 ---
 
 # Platform
 
-Learn how Convergio AI is built and how its components work together.
+Dive into the technical foundation of Convergio AI.
 
 <div class="grid cards" markdown>
 
@@ -21,8 +21,16 @@ Learn how Convergio AI is built and how its components work together.
 
     ---
 
-    Key abstractions and terminology used across the platform.
+    Key abstractions — inboxes, tags, tokens, boosts, and workflows.
 
     [:octicons-arrow-right-24: Concepts](concepts.md)
+
+-   :material-database-outline:{ .lg .middle } **Database Schema**
+
+    ---
+
+    PostgreSQL tables, relationships, and indexing strategy.
+
+    [:octicons-arrow-right-24: Database](database.md)
 
 </div>

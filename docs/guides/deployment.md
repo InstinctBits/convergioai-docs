@@ -1,29 +1,53 @@
 ---
 title: Deployment
-description: Deploy Convergio AI in production with Docker, Kubernetes, and cloud platforms.
+description: Deploy Convergio AI to production with Netlify, VPS, and Docker.
 ---
 
 # Deployment
 
-This guide covers deploying Convergio AI in production environments.
+## Recommended stack
+
+| Component | Platform | Description |
+| --------- | -------- | ----------- |
+| Frontend | Netlify / Vercel | Static build with API proxy |
+| Backend | VPS with PM2 | Express API server |
+| Database | PostgreSQL | Remote or managed |
+| Workflows | Self-hosted n8n | Automation engine |
+
+## Frontend (Netlify)
+
+The `netlify.toml` is pre-configured:
+
+```bash
+npm run build
+# Deploy dist/ to Netlify
+```
+
+Key settings:
+- Build command: `npm run build`
+- Publish directory: `dist`
+- API proxy: `/api/*` redirects to your VPS
+
+## Backend (PM2 on VPS)
+
+```bash
+# Install PM2
+npm install -g pm2
+
+# Start the API server
+pm2 start pm2.ecosystem.config.cjs
+
+# Save and enable startup
+pm2 save
+pm2 startup
+```
 
 ## Docker
 
 ```bash
-docker pull instinctbits/convergioai:latest
-docker run -p 8000:8000 -e CONVERGIOAI_API_KEY=your-key instinctbits/convergioai:latest
+docker-compose -f docker-compose.prod.yml up -d
 ```
 
-## Environment variables
+## Environment
 
-Set these in your deployment environment:
-
-| Variable              | Required | Description                |
-| --------------------- | -------- | -------------------------- |
-| `CONVERGIOAI_API_KEY` | Yes      | API authentication key     |
-| `DATABASE_URL`        | Yes      | PostgreSQL connection URI  |
-| `REDIS_URL`           | No       | Redis connection URI       |
-| `LOG_LEVEL`           | No       | Logging level (default: `info`) |
-
-!!! info "This page will be expanded"
-    Kubernetes manifests, Docker Compose configurations, and cloud-specific deployment guides are coming soon.
+Set all [configuration variables](../getting-started/configuration.md) in your production environment. Use a secrets manager for API keys.

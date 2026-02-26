@@ -1,38 +1,87 @@
 ---
 title: Configuration
-description: Configure authentication, environment variables, and runtime options for Convergio AI.
+description: Environment variables, API keys, and configuration options for Convergio AI.
 ---
 
 # Configuration
 
-## Authentication
+All configuration is managed through environment variables. Copy `.env.example` to `.env` and fill in the values.
 
-All API requests require a valid API key. Set it as an environment variable:
+## Required variables
 
-```bash
-export CONVERGIOAI_API_KEY="your-api-key-here"
-```
+### Database
 
-Or pass it directly in your code:
+| Variable       | Description                      | Example                                            |
+| -------------- | -------------------------------- | -------------------------------------------------- |
+| `DATABASE_URL` | PostgreSQL connection string     | `postgresql://user:pass@localhost:5432/convergioai` |
 
-```python
-from convergioai import Client
+### Authentication
 
-client = Client(api_key="your-api-key-here")
-```
+| Variable     | Description                   | Example                |
+| ------------ | ----------------------------- | ---------------------- |
+| `JWT_SECRET` | Secret key for JWT signing    | A random 64-char string |
 
-!!! warning "Keep your API key secure"
-    Never commit API keys to version control. Use environment variables or a secrets manager in production.
+### AI
 
-## Environment variables
+| Variable          | Description              | Example          |
+| ----------------- | ------------------------ | ---------------- |
+| `ANTHROPIC_API_KEY` | Anthropic Claude API key | `sk-ant-api03-...` |
 
-| Variable              | Description                    | Default                          |
-| --------------------- | ------------------------------ | -------------------------------- |
-| `CONVERGIOAI_API_KEY` | Your API authentication key    | —                                |
-| `CONVERGIOAI_BASE_URL`| API base URL                   | `https://api.convergioai.com/v1` |
-| `CONVERGIOAI_TIMEOUT` | Request timeout in seconds     | `30`                             |
+### Email (IMAP/SMTP)
+
+| Variable      | Description          | Example             |
+| ------------- | -------------------- | ------------------- |
+| `IMAP_HOST`   | IMAP server hostname | `imap.gmail.com`    |
+| `IMAP_PORT`   | IMAP server port     | `993`               |
+| `SMTP_HOST`   | SMTP server hostname | `smtp.gmail.com`    |
+| `SMTP_PORT`   | SMTP server port     | `587`               |
+| `EMAIL_USER`  | Email account        | `you@example.com`   |
+| `EMAIL_PASS`  | Email password/app password | `your-app-password` |
+
+## Optional variables
+
+### n8n Integration
+
+| Variable       | Description           | Example                      |
+| -------------- | --------------------- | ---------------------------- |
+| `N8N_BASE_URL` | n8n instance base URL | `http://localhost:5678`      |
+
+### Cal.com Integration
+
+| Variable         | Description       | Example           |
+| ---------------- | ----------------- | ----------------- |
+| `CALCOM_API_KEY` | Cal.com API key   | `cal_live_...`    |
+
+### Server
+
+| Variable | Description        | Default |
+| -------- | ------------------ | ------- |
+| `PORT`   | Backend API port   | `3001`  |
+| `NODE_ENV` | Runtime environment | `development` |
+
+## Subscription plans
+
+The database is seeded with three default plans:
+
+| Plan       | Monthly (INR) | Token limit | Features                                |
+| ---------- | ------------- | ----------- | --------------------------------------- |
+| Free       | 0             | 1,000       | 100 emails/month, 50 AI responses      |
+| Pro        | 1,999         | 50,000      | 5,000 emails, 2,500 AI responses       |
+| Enterprise | 9,999         | 500,000     | Unlimited emails/AI, dedicated support  |
+
+## Token packages
+
+| Package    | Tokens  | Price (INR) | Bonus tokens |
+| ---------- | ------- | ----------- | ------------ |
+| Starter    | 5,000   | 499         | 0            |
+| Growth     | 25,000  | 1,999       | 2,500        |
+| Business   | 100,000 | 6,999       | 15,000       |
+| Enterprise | 500,000 | 29,999      | 100,000      |
+
+!!! warning "Security"
+    Never commit `.env` files to version control. The `.gitignore` already excludes them.
 
 ## Next steps
 
-- [API Reference](../api/index.md) — Explore available endpoints
-- [Best Practices](../guides/best-practices.md) — Production configuration tips
+- [Architecture](../platform/architecture.md) — Understand the system design
+- [API Reference](../api/index.md) — Explore all endpoints

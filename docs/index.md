@@ -1,13 +1,13 @@
 ---
 title: Convergio AI Documentation
-description: Official documentation for Convergio AI — an API-first platform for intelligent convergence.
+description: Official documentation for Convergio AI — a unified omnichannel CRM platform with AI-powered email automation, stream management, and intelligent workflows.
 ---
 
 # Convergio AI
 
-**Build intelligent applications with a unified API.**
+**Unified Omnichannel CRM with AI-Powered Automation**
 
-Convergio AI is an API-first platform designed for developers who need powerful, scalable AI capabilities without the infrastructure overhead. Built with FastAPI, it delivers high-performance endpoints with enterprise-grade reliability.
+Convergio AI is a modern, open-source platform that brings together email management, AI-powered automation, stream broadcasting, calendar scheduling, and workflow orchestration — all in one intelligent dashboard. Built with React, Express, and PostgreSQL, powered by Claude AI and n8n workflows.
 
 <div class="grid cards" markdown>
 
@@ -15,35 +15,88 @@ Convergio AI is an API-first platform designed for developers who need powerful,
 
     ---
 
-    Set up your environment and make your first API call in under five minutes.
+    Install, configure, and run your first instance in minutes.
 
     [:octicons-arrow-right-24: Quickstart](getting-started/quickstart.md)
+
+-   :material-robot-outline:{ .lg .middle } **Features**
+
+    ---
+
+    AI email automation, StreamBoost, calendar, task management, and more.
+
+    [:octicons-arrow-right-24: Explore features](features/index.md)
 
 -   :material-api:{ .lg .middle } **API Reference**
 
     ---
 
-    Complete reference for all endpoints, authentication, and error handling.
+    Complete REST API reference with 80+ endpoints for emails, AI, tasks, and streams.
 
-    [:octicons-arrow-right-24: Explore the API](api/index.md)
+    [:octicons-arrow-right-24: API docs](api/index.md)
 
 -   :material-sitemap-outline:{ .lg .middle } **Architecture**
 
     ---
 
-    Understand the platform's design, components, and how they connect.
+    System design, database schema, and technology stack overview.
 
     [:octicons-arrow-right-24: Platform overview](platform/architecture.md)
 
--   :material-book-open-variant:{ .lg .middle } **Guides**
+-   :material-connection:{ .lg .middle } **Integrations**
 
     ---
 
-    Step-by-step guides for deployment, scaling, and best practices.
+    n8n workflows, Cal.com scheduling, and multi-platform posting.
 
-    [:octicons-arrow-right-24: View guides](guides/index.md)
+    [:octicons-arrow-right-24: View integrations](integrations/index.md)
+
+-   :material-code-braces:{ .lg .middle } **Development**
+
+    ---
+
+    Contributing guide, design system, and development setup.
+
+    [:octicons-arrow-right-24: Start contributing](development/index.md)
 
 </div>
+
+## Key capabilities
+
+| Capability | Description |
+| ---------- | ----------- |
+| **AI Email Automation** | Claude AI-powered auto-replies, email intelligence, and smart categorization |
+| **StreamBoost** | YouTube live stream detection with cross-platform announcements to Discord, X, Instagram, Facebook |
+| **AI Operations Copilot** | Natural language chat interface for email summaries, lead tracking, and task management |
+| **Calendar & Scheduling** | Full calendar with Cal.com integration, meeting detection from emails |
+| **Task Management** | Convert emails to tasks with priorities, assignments, and due dates |
+| **Digital Audits** | AI-powered security and digital audit workflows |
+| **n8n Workflows** | Automated IMAP → AI → SMTP → Database pipelines with visual workflow builder |
+
+## Tech stack
+
+=== "Frontend"
+
+    - **React 19** with TypeScript
+    - **Vite 6** build tooling
+    - **Tabler Design System** with dark/light mode
+    - **Recharts** for analytics visualization
+    - **TipTap** rich text editor
+
+=== "Backend"
+
+    - **Express 5** (Node.js 20+)
+    - **PostgreSQL** with `pg` driver
+    - **JWT** authentication with bcrypt
+    - **Swagger/OpenAPI** documentation
+    - **Sharp** for image processing
+
+=== "AI & Automation"
+
+    - **Anthropic Claude** for AI responses
+    - **n8n** for workflow automation
+    - **IMAPFlow** for email synchronization
+    - **Cal.com** for scheduling
 
 ---
 

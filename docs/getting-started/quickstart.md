@@ -1,60 +1,86 @@
 ---
 title: Quickstart
-description: Make your first Convergio AI API call in under five minutes.
+description: Get Convergio AI running locally in under 10 minutes.
 ---
 
 # Quickstart
 
-Get up and running with Convergio AI in minutes.
+Get a fully functional Convergio AI instance running on your machine.
 
-## Prerequisites
+## 1. Clone the repository
 
-- Python 3.10+ or Node.js 18+
-- A Convergio AI API key ([get one here](#))
+```bash
+git clone https://github.com/InstinctBits/convergioai.git
+cd convergioai
+```
 
-## Make your first request
+## 2. Install dependencies
 
-=== "Python"
+```bash
+npm install
+```
 
-    ```python
-    import requests
+## 3. Configure environment
 
-    response = requests.post(
-        "https://api.convergioai.com/v1/predict",
-        headers={"Authorization": "Bearer YOUR_API_KEY"},
-        json={"input": "Hello, Convergio!"},
-    )
+```bash
+cp .env.example .env
+```
 
-    print(response.json())
-    ```
+Edit `.env` with your credentials:
 
-=== "cURL"
+```bash
+# Database
+DATABASE_URL=postgresql://user:password@localhost:5432/convergioai
 
-    ```bash
-    curl -X POST https://api.convergioai.com/v1/predict \
-      -H "Authorization: Bearer YOUR_API_KEY" \
-      -H "Content-Type: application/json" \
-      -d '{"input": "Hello, Convergio!"}'
-    ```
+# AI
+ANTHROPIC_API_KEY=sk-ant-...
 
-=== "JavaScript"
+# Email (IMAP/SMTP)
+IMAP_HOST=imap.gmail.com
+IMAP_PORT=993
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+EMAIL_USER=your@email.com
+EMAIL_PASS=your-app-password
 
-    ```javascript
-    const response = await fetch("https://api.convergioai.com/v1/predict", {
-      method: "POST",
-      headers: {
-        Authorization: "Bearer YOUR_API_KEY",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ input: "Hello, Convergio!" }),
-    });
+# JWT
+JWT_SECRET=your-secret-key
+```
 
-    const data = await response.json();
-    console.log(data);
-    ```
+## 4. Initialize the database
 
-## Next steps
+```bash
+npm run db:init
+```
 
-- [Installation](installation.md) — Set up your local development environment
-- [Configuration](configuration.md) — Customize your setup
-- [API Reference](../api/index.md) — Explore all available endpoints
+This runs the SQL schemas (`schema.sql`, `schema-settings.sql`, `schema-calendar.sql`, `schema-streamboost.sql`) to create all required tables.
+
+## 5. Start the development servers
+
+```bash
+npm run dev:all
+```
+
+This starts both servers concurrently:
+
+| Service  | URL                     | Description       |
+| -------- | ----------------------- | ----------------- |
+| Frontend | `http://localhost:5173` | React dashboard   |
+| Backend  | `http://localhost:3001` | Express API server |
+
+## 6. Access the dashboard
+
+Open [http://localhost:5173](http://localhost:5173) in your browser. You'll see the login page.
+
+A demo account is seeded automatically:
+
+| Field    | Value                        |
+| -------- | ---------------------------- |
+| Email    | `demo@digitechnomads.com`    |
+| Password | `demo123`                    |
+
+## What's next?
+
+- [Installation](installation.md) — Detailed setup including Docker and n8n
+- [Configuration](configuration.md) — All environment variables and options
+- [Features](../features/index.md) — Explore what Convergio AI can do

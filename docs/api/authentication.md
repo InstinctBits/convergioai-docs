@@ -1,24 +1,112 @@
 ---
 title: Authentication
-description: How to authenticate with the Convergio AI API.
+description: JWT-based authentication for the Convergio AI API.
 ---
 
 # Authentication
 
-All API requests must include a valid API key in the `Authorization` header.
+Convergio AI uses JWT (JSON Web Tokens) with database-backed sessions for authentication.
+
+## Endpoints
+
+### Register
 
 ```
-Authorization: Bearer YOUR_API_KEY
+POST /api/auth/register
 ```
 
-## Obtaining an API key
+Create a new user account.
 
-API keys can be generated from the Convergio AI dashboard.
+=== "Request"
 
-!!! warning "Security"
-    - Rotate keys regularly.
-    - Never expose keys in client-side code.
-    - Use environment variables in production.
+    ```json
+    {
+      "email": "user@example.com",
+      "password": "securepassword",
+      "name": "John Doe"
+    }
+    ```
 
-!!! info "This page will be expanded"
-    Detailed authentication flows, scopes, and OAuth support are coming soon.
+=== "Response (201)"
+
+    ```json
+    {
+      "token": "eyJhbGciOi...",
+      "user": {
+        "id": 1,
+        "email": "user@example.com",
+        "name": "John Doe"
+      }
+    }
+    ```
+
+### Login
+
+```
+POST /api/auth/login
+```
+
+Authenticate with email and password. Returns a JWT and refresh token.
+
+=== "Request"
+
+    ```json
+    {
+      "email": "user@example.com",
+      "password": "securepassword"
+    }
+    ```
+
+=== "Response (200)"
+
+    ```json
+    {
+      "token": "eyJhbGciOi...",
+      "refreshToken": "eyJhbGciOi...",
+      "user": {
+        "id": 1,
+        "email": "user@example.com",
+        "name": "John Doe"
+      }
+    }
+    ```
+
+### Refresh token
+
+```
+POST /api/auth/refresh
+```
+
+Exchange a refresh token for a new access token.
+
+### Logout
+
+```
+POST /api/auth/logout
+```
+
+Destroy the current session. Requires JWT.
+
+### Get current user
+
+```
+GET /api/auth/me
+```
+
+Returns the authenticated user's profile. Requires JWT.
+
+## Using the token
+
+Include the JWT in the `Authorization` header:
+
+```
+Authorization: Bearer eyJhbGciOi...
+```
+
+## Security model
+
+- JWT + database session double-check (valid JWT AND active session)
+- Session revocation is instant (delete session record)
+- Refresh tokens for seamless token renewal
+- Password hashing with bcrypt (cost factor 10)
+- Optional 2FA via TOTP with backup codes

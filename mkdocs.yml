@@ -11,9 +11,9 @@ site_name: Convergio AI
 site_url: https://docs.instinctbits.com/
 site_author: Instinct Bits Lab
 site_description: >-
-  Official documentation for Convergio AI — an API-first platform
-  for intelligent convergence. Architecture, APIs, setup guides,
-  and developer reference.
+  Official documentation for Convergio AI — a unified omnichannel CRM
+  platform with AI-powered email automation, stream management, and
+  intelligent workflow orchestration. Built by Digitech Nomads.
 
 # -- Repository ---------------------------------------------------------------
 
@@ -218,25 +218,48 @@ nav:
       - Installation: getting-started/installation.md
       - Configuration: getting-started/configuration.md
 
+  - Features:
+      - features/index.md
+      - AI Email Automation: features/email-automation.md
+      - AI Operations Copilot: features/ai-copilot.md
+      - StreamBoost: features/streamboost.md
+      - Calendar & Scheduling: features/calendar.md
+      - Task Management: features/tasks.md
+      - Digital Audits: features/digital-audits.md
+
   - Platform:
       - platform/index.md
       - Architecture: platform/architecture.md
       - Core Concepts: platform/concepts.md
+      - Database Schema: platform/database.md
 
   - API Reference:
       - api/index.md
       - Authentication: api/authentication.md
-      - Endpoints: api/endpoints.md
+      - Emails: api/emails.md
+      - Tasks: api/tasks.md
+      - AI: api/ai.md
+      - Calendar: api/calendar.md
+      - Settings: api/settings.md
+      - StreamBoost: api/streamboost.md
       - Error Handling: api/errors.md
-      - Rate Limits: api/rate-limits.md
+
+  - Integrations:
+      - integrations/index.md
+      - n8n Workflows: integrations/n8n.md
+      - Cal.com: integrations/calcom.md
+      - Platform Connections: integrations/platforms.md
 
   - Guides:
       - guides/index.md
       - Deployment: guides/deployment.md
+      - Self-Hosting: guides/self-hosting.md
       - Best Practices: guides/best-practices.md
 
-  - SDKs:
-      - sdks/index.md
+  - Development:
+      - development/index.md
+      - Contributing: development/contributing.md
+      - Design System: development/design-system.md
 
   - Changelog:
       - changelog.md
