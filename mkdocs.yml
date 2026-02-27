@@ -86,7 +86,6 @@ theme:
     - content.tooltips
 
     # Header
-    - header.autohide
     - announce.dismiss
 
     # Table of contents
