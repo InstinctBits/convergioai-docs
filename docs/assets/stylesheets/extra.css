@@ -1,27 +1,35 @@
 /* ------------------------------------------------------------------- */
 /*  Convergio AI — Custom theme overrides                              */
-/*  Extends Material for MkDocs with brand-specific refinements.       */
+/*  Extends Material for MkDocs with Digitech Nomads branding.         */
 /* ------------------------------------------------------------------- */
+
+/* -- Manrope font import -------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
 
 /* -- Brand color overrides (light mode) ----------------------------- */
 
 :root {
-  --md-primary-fg-color: #1a1a2e;
-  --md-primary-fg-color--light: #16213e;
-  --md-primary-fg-color--dark: #0f0f23;
-  --md-accent-fg-color: #4361ee;
+  --md-primary-fg-color: #f15a24;
+  --md-primary-fg-color--light: #ff7043;
+  --md-primary-fg-color--dark: #d14d1e;
+  --md-accent-fg-color: #f15a24;
+  --md-typeset-a-color: #f15a24;
 }
 
 /* -- Brand color overrides (dark mode) ------------------------------ */
 
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color: #1a1a2e;
-  --md-accent-fg-color: #7b8cff;
-  --md-default-bg-color: #0d1117;
-  --md-default-bg-color--light: #161b22;
+  --md-primary-fg-color: #f15a24;
+  --md-primary-fg-color--light: #ff7043;
+  --md-primary-fg-color--dark: #d14d1e;
+  --md-accent-fg-color: #ff7043;
+  --md-typeset-a-color: #ff7043;
+  --md-default-bg-color: #111111;
+  --md-default-bg-color--light: #1a1a1a;
 }
 
-/* -- Typography — larger base size ---------------------------------- */
+/* -- Typography — Manrope headings, larger base --------------------- */
 
 .md-typeset {
   font-size: 0.9rem;
@@ -29,18 +37,21 @@
 }
 
 .md-typeset h1 {
+  font-family: 'Manrope', var(--md-text-font-family);
   font-size: 2em;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: -0.02em;
 }
 
 .md-typeset h2 {
+  font-family: 'Manrope', var(--md-text-font-family);
   font-size: 1.5em;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.01em;
 }
 
 .md-typeset h3 {
+  font-family: 'Manrope', var(--md-text-font-family);
   font-size: 1.25em;
   font-weight: 600;
 }
@@ -80,7 +91,7 @@
 /* -- Announcement bar ----------------------------------------------- */
 
 .md-banner {
-  background-color: var(--md-accent-fg-color);
+  background-color: #f15a24;
   color: white;
 }
 

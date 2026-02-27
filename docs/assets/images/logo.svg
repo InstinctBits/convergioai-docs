@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
-  <rect width="48" height="48" rx="8" fill="#4361ee"/>
+  <rect width="48" height="48" rx="8" fill="#f15a24"/>
   <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle"
-        font-family="Inter, system-ui, sans-serif" font-weight="700"
+        font-family="Manrope, Inter, system-ui, sans-serif" font-weight="800"
         font-size="22" fill="white">C</text>
 </svg>
