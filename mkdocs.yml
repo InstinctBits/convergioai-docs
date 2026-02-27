@@ -7,7 +7,7 @@
 
 # -- Site metadata -----------------------------------------------------------
 
-site_name: Convergio AI
+site_name: Digitech Nomads
 site_url: https://docs.digitechnomads.com/
 site_author: Instinct Bits Lab
 site_description: >-
@@ -34,8 +34,8 @@ theme:
   custom_dir: overrides
 
   # Brand identity
-  logo: assets/images/logo.svg
-  favicon: assets/images/favicon.png
+  logo: assets/images/logo.png
+  favicon: assets/images/logo.png
 
   # Color palette with light/dark toggle
   palette:
