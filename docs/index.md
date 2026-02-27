@@ -17,7 +17,7 @@ Convergio AI is a modern, open-source platform that brings together email manage
 
     Install, configure, and run your first instance in minutes.
 
-    [:octicons-arrow-right-24: Quickstart](getting-started/quickstart.md)
+    [:octicons-arrow-right-24: Quickstart](using/getting-started/quickstart.md)
 
 -   :material-robot-outline:{ .lg .middle } **Features**
 
@@ -25,7 +25,7 @@ Convergio AI is a modern, open-source platform that brings together email manage
 
     AI email automation, StreamBoost, calendar, task management, and more.
 
-    [:octicons-arrow-right-24: Explore features](features/index.md)
+    [:octicons-arrow-right-24: Explore features](using/index.md)
 
 -   :material-api:{ .lg .middle } **API Reference**
 
@@ -41,7 +41,7 @@ Convergio AI is a modern, open-source platform that brings together email manage
 
     System design, database schema, and technology stack overview.
 
-    [:octicons-arrow-right-24: Platform overview](platform/architecture.md)
+    [:octicons-arrow-right-24: Platform overview](using/core-concepts/architecture.md)
 
 -   :material-connection:{ .lg .middle } **Integrations**
 

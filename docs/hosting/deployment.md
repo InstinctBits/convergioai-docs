@@ -50,4 +50,4 @@ docker-compose -f docker-compose.prod.yml up -d
 
 ## Environment
 
-Set all [configuration variables](../getting-started/configuration.md) in your production environment. Use a secrets manager for API keys.
+Set all [configuration variables](../using/getting-started/configuration.md) in your production environment. Use a secrets manager for API keys.

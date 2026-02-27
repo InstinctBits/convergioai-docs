@@ -115,4 +115,4 @@ Expected response:
 ## Next steps
 
 - [Configuration](configuration.md) — Environment variables and API key setup
-- [Features](../features/index.md) — Explore platform capabilities
+- [Features](../index.md) — Explore platform capabilities

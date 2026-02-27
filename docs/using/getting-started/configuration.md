@@ -83,5 +83,5 @@ The database is seeded with three default plans:
 
 ## Next steps
 
-- [Architecture](../platform/architecture.md) — Understand the system design
-- [API Reference](../api/index.md) — Explore all endpoints
+- [Architecture](../core-concepts/architecture.md) — Understand the system design
+- [API Reference](../../api/index.md) — Explore all endpoints

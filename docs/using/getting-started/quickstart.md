@@ -83,4 +83,4 @@ A demo account is seeded automatically:
 
 - [Installation](installation.md) — Detailed setup including Docker and n8n
 - [Configuration](configuration.md) — All environment variables and options
-- [Features](../features/index.md) — Explore what Convergio AI can do
+- [Features](../index.md) — Explore what Convergio AI can do

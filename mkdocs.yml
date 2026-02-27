@@ -212,26 +212,30 @@ nav:
   - Home:
       - index.md
 
-  - Getting Started:
-      - getting-started/index.md
-      - Quickstart: getting-started/quickstart.md
-      - Installation: getting-started/installation.md
-      - Configuration: getting-started/configuration.md
+  - Using Convergio AI:
+      - using/index.md
+      - Getting Started:
+          - using/getting-started/index.md
+          - Quickstart: using/getting-started/quickstart.md
+          - Installation: using/getting-started/installation.md
+          - Configuration: using/getting-started/configuration.md
+      - Core Concepts:
+          - Architecture: using/core-concepts/architecture.md
+          - Concepts: using/core-concepts/concepts.md
+          - Database Schema: using/core-concepts/database.md
+      - Email Automation: using/email-automation/overview.md
+      - AI Copilot: using/ai-copilot/overview.md
+      - StreamBoost: using/streamboost/overview.md
+      - Calendar & Scheduling: using/calendar/overview.md
+      - Task Management: using/tasks/overview.md
+      - Digital Audits: using/digital-audits/overview.md
+      - Best Practices: using/best-practices/best-practices.md
 
-  - Features:
-      - features/index.md
-      - AI Email Automation: features/email-automation.md
-      - AI Operations Copilot: features/ai-copilot.md
-      - StreamBoost: features/streamboost.md
-      - Calendar & Scheduling: features/calendar.md
-      - Task Management: features/tasks.md
-      - Digital Audits: features/digital-audits.md
-
-  - Platform:
-      - platform/index.md
-      - Architecture: platform/architecture.md
-      - Core Concepts: platform/concepts.md
-      - Database Schema: platform/database.md
+  - Integrations:
+      - integrations/index.md
+      - n8n Workflows: integrations/n8n.md
+      - Cal.com: integrations/calcom.md
+      - Platform Connections: integrations/platforms.md
 
   - API Reference:
       - api/index.md
@@ -244,22 +248,13 @@ nav:
       - StreamBoost: api/streamboost.md
       - Error Handling: api/errors.md
 
-  - Integrations:
-      - integrations/index.md
-      - n8n Workflows: integrations/n8n.md
-      - Cal.com: integrations/calcom.md
-      - Platform Connections: integrations/platforms.md
-
-  - Guides:
-      - guides/index.md
-      - Deployment: guides/deployment.md
-      - Self-Hosting: guides/self-hosting.md
-      - Best Practices: guides/best-practices.md
+  - Hosting & Deployment:
+      - hosting/index.md
+      - Deployment: hosting/deployment.md
+      - Self-Hosting: hosting/self-hosting.md
 
   - Development:
       - development/index.md
       - Contributing: development/contributing.md
       - Design System: development/design-system.md
-
-  - Changelog:
-      - changelog.md
+      - Changelog: development/changelog.md

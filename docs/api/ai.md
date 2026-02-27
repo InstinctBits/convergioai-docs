@@ -48,7 +48,7 @@ Generate AI content with optional model override.
 POST /api/ai/chat
 ```
 
-Natural language chat endpoint. See [AI Operations Copilot](../features/ai-copilot.md).
+Natural language chat endpoint. See [AI Operations Copilot](../using/ai-copilot/overview.md).
 
 ```json
 {
