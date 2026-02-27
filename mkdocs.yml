@@ -161,20 +161,39 @@ extra:
     provider: mike
     default: stable
 
-  # Social links
+  # Social links — Digitech Nomads
   social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/InstinctBits
-      name: Instinct Bits on GitHub
-    - icon: fontawesome/brands/github
-      link: https://github.com/digitechnomads
-      name: Digitech Nomads on GitHub
-    - icon: fontawesome/solid/globe
-      link: https://instinctbits.com
-      name: Instinct Bits Lab
     - icon: fontawesome/solid/globe
       link: https://digitechnomads.com
       name: Digitech Nomads
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/digitechnomads
+      name: Digitech Nomads on Facebook
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/digitech_nomads
+      name: Digitech Nomads on Instagram
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/DigitechNomads
+      name: Digitech Nomads on X
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/digitechnomads
+      name: Digitech Nomads on LinkedIn
+    # Instinct Bits
+    - icon: fontawesome/solid/globe
+      link: https://instinctbits.com/
+      name: Instinct Bits
+    - icon: fontawesome/brands/github
+      link: https://github.com/InstinctBits
+      name: Instinct Bits on GitHub
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/instinctbit
+      name: Instinct Bits on Facebook
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/instinctbits/
+      name: Instinct Bits on Instagram
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/instinctbits
+      name: Instinct Bits on X
 
   # Analytics (uncomment and configure when ready)
   # analytics:
