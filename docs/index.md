@@ -110,5 +110,5 @@ New to Convergio AI? Follow this path:
 ---
 
 <div style="text-align: center; margin-top: 2rem; color: var(--md-default-fg-color--lighter); font-size: 0.8rem;" markdown>
-A [Digitech Nomads](https://digitechnomads.com){ target="_blank" } project. Produced by [Instinct Bits Lab](https://instinctbits.com){ target="_blank" }.
+🔥 Ignited at [Instinct Bits Lab](https://instinctbits.com){ target="_blank" } · ⚡ Supercharged by [Digitech Nomads](https://digitechnomads.com){ target="_blank" }
 </div>
