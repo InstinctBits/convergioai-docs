@@ -1,6 +1,6 @@
 /* ------------------------------------------------------------------- */
 /*  Convergio AI — Custom theme overrides                              */
-/*  Extends Material for MkDocs with Digitech Nomads branding.         */
+/*  Extends Material for MkDocs with ConvergioAI app branding.         */
 /* ------------------------------------------------------------------- */
 
 /* -- Manrope font import -------------------------------------------- */
@@ -10,23 +10,23 @@
 /* -- Brand color overrides (light mode) ----------------------------- */
 
 :root {
-  --md-primary-fg-color: #f15a24;
-  --md-primary-fg-color--light: #ff7043;
-  --md-primary-fg-color--dark: #d14d1e;
-  --md-accent-fg-color: #f15a24;
-  --md-typeset-a-color: #f15a24;
+  --md-primary-fg-color: #182433;
+  --md-primary-fg-color--light: #1d2838;
+  --md-primary-fg-color--dark: #0f1923;
+  --md-accent-fg-color: #3b82f6;
+  --md-typeset-a-color: #3b82f6;
 }
 
 /* -- Brand color overrides (dark mode) ------------------------------ */
 
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color: #f15a24;
-  --md-primary-fg-color--light: #ff7043;
-  --md-primary-fg-color--dark: #d14d1e;
-  --md-accent-fg-color: #ff7043;
-  --md-typeset-a-color: #ff7043;
-  --md-default-bg-color: #111111;
-  --md-default-bg-color--light: #1a1a1a;
+  --md-primary-fg-color: #182433;
+  --md-primary-fg-color--light: #1d2838;
+  --md-primary-fg-color--dark: #0f1923;
+  --md-accent-fg-color: #60a5fa;
+  --md-typeset-a-color: #60a5fa;
+  --md-default-bg-color: #182433;
+  --md-default-bg-color--light: #1d2838;
 }
 
 /* -- Typography — Manrope headings, larger base --------------------- */
@@ -91,7 +91,7 @@
 /* -- Announcement bar ----------------------------------------------- */
 
 .md-banner {
-  background-color: #f15a24;
+  background-color: #f15b22;
   color: white;
 }
 
