@@ -2,146 +2,154 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.instinctbits.com/</loc>
-         <lastmod>2026-02-26</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.instinctbits.com/changelog/</loc>
-         <lastmod>2026-02-26</lastmod>
+         <lastmod>2026-02-27</lastmod>
     </url>
     <url>
          <loc>https://docs.instinctbits.com/api/</loc>
-         <lastmod>2026-02-26</lastmod>
+         <lastmod>2026-02-27</lastmod>
     </url>
     <url>
          <loc>https://docs.instinctbits.com/api/ai/</loc>
-         <lastmod>2026-02-26</lastmod>
+         <lastmod>2026-02-27</lastmod>
     </url>
     <url>
          <loc>https://docs.instinctbits.com/api/authentication/</loc>
-         <lastmod>2026-02-26</lastmod>
+         <lastmod>2026-02-27</lastmod>
     </url>
     <url>
          <loc>https://docs.instinctbits.com/api/calendar/</loc>
-         <lastmod>2026-02-26</lastmod>
+         <lastmod>2026-02-27</lastmod>
     </url>
     <url>
          <loc>https://docs.instinctbits.com/api/emails/</loc>
-         <lastmod>2026-02-26</lastmod>
+         <lastmod>2026-02-27</lastmod>
     </url>
     <url>
          <loc>https://docs.instinctbits.com/api/errors/</loc>
-         <lastmod>2026-02-26</lastmod>
+         <lastmod>2026-02-27</lastmod>
     </url>
     <url>
          <loc>https://docs.instinctbits.com/api/settings/</loc>
-         <lastmod>2026-02-26</lastmod>
+         <lastmod>2026-02-27</lastmod>
     </url>
     <url>
          <loc>https://docs.instinctbits.com/api/streamboost/</loc>
-         <lastmod>2026-02-26</lastmod>
+         <lastmod>2026-02-27</lastmod>
     </url>
     <url>
          <loc>https://docs.instinctbits.com/api/tasks/</loc>
-         <lastmod>2026-02-26</lastmod>
+         <lastmod>2026-02-27</lastmod>
     </url>
     <url>
          <loc>https://docs.instinctbits.com/development/</loc>
-         <lastmod>2026-02-26</lastmod>
+         <lastmod>2026-02-27</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.instinctbits.com/development/changelog/</loc>
+         <lastmod>2026-02-27</lastmod>
     </url>
     <url>
          <loc>https://docs.instinctbits.com/development/contributing/</loc>
-         <lastmod>2026-02-26</lastmod>
+         <lastmod>2026-02-27</lastmod>
     </url>
     <url>
          <loc>https://docs.instinctbits.com/development/design-system/</loc>
-         <lastmod>2026-02-26</lastmod>
+         <lastmod>2026-02-27</lastmod>
     </url>
     <url>
-         <loc>https://docs.instinctbits.com/features/</loc>
-         <lastmod>2026-02-26</lastmod>
+         <loc>https://docs.instinctbits.com/hosting/</loc>
+         <lastmod>2026-02-27</lastmod>
     </url>
     <url>
-         <loc>https://docs.instinctbits.com/features/ai-copilot/</loc>
-         <lastmod>2026-02-26</lastmod>
+         <loc>https://docs.instinctbits.com/hosting/deployment/</loc>
+         <lastmod>2026-02-27</lastmod>
     </url>
     <url>
-         <loc>https://docs.instinctbits.com/features/calendar/</loc>
-         <lastmod>2026-02-26</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.instinctbits.com/features/digital-audits/</loc>
-         <lastmod>2026-02-26</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.instinctbits.com/features/email-automation/</loc>
-         <lastmod>2026-02-26</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.instinctbits.com/features/streamboost/</loc>
-         <lastmod>2026-02-26</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.instinctbits.com/features/tasks/</loc>
-         <lastmod>2026-02-26</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.instinctbits.com/getting-started/</loc>
-         <lastmod>2026-02-26</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.instinctbits.com/getting-started/configuration/</loc>
-         <lastmod>2026-02-26</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.instinctbits.com/getting-started/installation/</loc>
-         <lastmod>2026-02-26</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.instinctbits.com/getting-started/quickstart/</loc>
-         <lastmod>2026-02-26</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.instinctbits.com/guides/</loc>
-         <lastmod>2026-02-26</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.instinctbits.com/guides/deployment/</loc>
-         <lastmod>2026-02-26</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.instinctbits.com/guides/self-hosting/</loc>
-         <lastmod>2026-02-26</lastmod>
+         <loc>https://docs.instinctbits.com/hosting/self-hosting/</loc>
+         <lastmod>2026-02-27</lastmod>
     </url>
     <url>
          <loc>https://docs.instinctbits.com/integrations/</loc>
-         <lastmod>2026-02-26</lastmod>
+         <lastmod>2026-02-27</lastmod>
     </url>
     <url>
          <loc>https://docs.instinctbits.com/integrations/calcom/</loc>
-         <lastmod>2026-02-26</lastmod>
+         <lastmod>2026-02-27</lastmod>
     </url>
     <url>
          <loc>https://docs.instinctbits.com/integrations/n8n/</loc>
-         <lastmod>2026-02-26</lastmod>
+         <lastmod>2026-02-27</lastmod>
     </url>
     <url>
          <loc>https://docs.instinctbits.com/integrations/platforms/</loc>
-         <lastmod>2026-02-26</lastmod>
+         <lastmod>2026-02-27</lastmod>
     </url>
     <url>
-         <loc>https://docs.instinctbits.com/platform/</loc>
-         <lastmod>2026-02-26</lastmod>
+         <loc>https://docs.instinctbits.com/plans/2026-02-28-documentation-overhaul-design/</loc>
+         <lastmod>2026-02-27</lastmod>
     </url>
     <url>
-         <loc>https://docs.instinctbits.com/platform/architecture/</loc>
-         <lastmod>2026-02-26</lastmod>
+         <loc>https://docs.instinctbits.com/plans/2026-02-28-documentation-overhaul/</loc>
+         <lastmod>2026-02-27</lastmod>
     </url>
     <url>
-         <loc>https://docs.instinctbits.com/platform/concepts/</loc>
-         <lastmod>2026-02-26</lastmod>
+         <loc>https://docs.instinctbits.com/using/</loc>
+         <lastmod>2026-02-27</lastmod>
     </url>
     <url>
-         <loc>https://docs.instinctbits.com/platform/database/</loc>
-         <lastmod>2026-02-26</lastmod>
+         <loc>https://docs.instinctbits.com/using/ai-copilot/overview/</loc>
+         <lastmod>2026-02-27</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.instinctbits.com/using/best-practices/best-practices/</loc>
+         <lastmod>2026-02-27</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.instinctbits.com/using/calendar/overview/</loc>
+         <lastmod>2026-02-27</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.instinctbits.com/using/core-concepts/architecture/</loc>
+         <lastmod>2026-02-27</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.instinctbits.com/using/core-concepts/concepts/</loc>
+         <lastmod>2026-02-27</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.instinctbits.com/using/core-concepts/database/</loc>
+         <lastmod>2026-02-27</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.instinctbits.com/using/digital-audits/overview/</loc>
+         <lastmod>2026-02-27</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.instinctbits.com/using/email-automation/overview/</loc>
+         <lastmod>2026-02-27</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.instinctbits.com/using/getting-started/</loc>
+         <lastmod>2026-02-27</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.instinctbits.com/using/getting-started/configuration/</loc>
+         <lastmod>2026-02-27</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.instinctbits.com/using/getting-started/installation/</loc>
+         <lastmod>2026-02-27</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.instinctbits.com/using/getting-started/quickstart/</loc>
+         <lastmod>2026-02-27</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.instinctbits.com/using/streamboost/overview/</loc>
+         <lastmod>2026-02-27</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.instinctbits.com/using/tasks/overview/</loc>
+         <lastmod>2026-02-27</lastmod>
     </url>
 </urlset>
