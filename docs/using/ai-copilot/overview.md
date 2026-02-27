@@ -43,3 +43,9 @@ The copilot respects the globally selected AI model. Switch models at any time v
 - **Anthropic Claude** — High quality reasoning, best for complex analysis
 - **Qwen 480B** — Alternative via OpenRouter
 - **Qwen3-8B** — Lightweight option via Bytez
+
+## Related pages
+
+- [Email Automation](../email-automation/overview.md) — AI-powered email management
+- [AI API](../../api/ai.md) — AI endpoint reference
+- [Task Management](../tasks/overview.md) — Task operations via copilot

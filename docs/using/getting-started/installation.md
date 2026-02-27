@@ -114,5 +114,6 @@ Expected response:
 
 ## Next steps
 
-- [Configuration](configuration.md) — Environment variables and API key setup
-- [Features](../index.md) — Explore platform capabilities
+- [Quickstart](quickstart.md) — Get running in 10 minutes
+- [Configuration](configuration.md) — Environment variables and API keys
+- [Architecture](../core-concepts/architecture.md) — Understand the system design

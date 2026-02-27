@@ -83,5 +83,6 @@ The database is seeded with three default plans:
 
 ## Next steps
 
-- [Architecture](../core-concepts/architecture.md) — Understand the system design
-- [API Reference](../../api/index.md) — Explore all endpoints
+- [Email Automation](../email-automation/overview.md) — Set up AI-powered email management
+- [Deployment](../../hosting/deployment.md) — Deploy to production
+- [Best Practices](../best-practices/best-practices.md) — Production patterns

@@ -7,6 +7,10 @@ description: Get Convergio AI running locally in under 10 minutes.
 
 Get a fully functional Convergio AI instance running on your machine.
 
+!!! info "Prerequisites"
+    Make sure you have Node.js 20+, PostgreSQL 15+, and npm 9+ installed.
+    See [Installation](installation.md) for detailed setup instructions.
+
 ## 1. Clone the repository
 
 ```bash
@@ -84,3 +88,9 @@ A demo account is seeded automatically:
 - [Installation](installation.md) — Detailed setup including Docker and n8n
 - [Configuration](configuration.md) — All environment variables and options
 - [Features](../index.md) — Explore what Convergio AI can do
+
+## Next steps
+
+- [Core Concepts](../core-concepts/concepts.md) — Understand the domain model
+- [Email Automation](../email-automation/overview.md) — Set up AI-powered email
+- [Configuration](configuration.md) — Fine-tune environment variables

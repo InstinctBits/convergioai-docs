@@ -60,3 +60,9 @@ The meeting detector service analyzes email text using NLP-based keyword scoring
 - Suggests creating a calendar event
 
 Use the `/api/calendar/detect` endpoint to analyze any text for meeting signals, or `/api/calendar/events/from-email` to create an event directly from a detected meeting.
+
+## Related pages
+
+- [Cal.com Integration](../../integrations/calcom.md) — Calendar integration setup
+- [Calendar API](../../api/calendar.md) — Calendar endpoint reference
+- [Email Automation](../email-automation/overview.md) — Meeting detection from emails

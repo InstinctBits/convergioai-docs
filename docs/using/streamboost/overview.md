@@ -82,3 +82,9 @@ StreamBoost tracks subscriber milestones and automatically generates celebration
 | 50K Subscribers | 50,000 |
 
 Custom thresholds can be added via the API.
+
+## Related pages
+
+- [StreamBoost API](../../api/streamboost.md) — API endpoints for stream management
+- [Platform Connections](../../integrations/platforms.md) — Connected social platforms
+- [Configuration](../getting-started/configuration.md) — YouTube API setup

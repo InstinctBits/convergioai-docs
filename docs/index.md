@@ -61,17 +61,26 @@ Convergio AI is a modern, open-source platform that brings together email manage
 
 </div>
 
+## Start here
+
+New to Convergio AI? Follow this path:
+
+1. **[Quickstart](using/getting-started/quickstart.md)** — Get a running instance in 10 minutes
+2. **[Core Concepts](using/core-concepts/concepts.md)** — Understand the domain model
+3. **[Email Automation](using/email-automation/overview.md)** — Set up your first AI-powered inbox
+4. **[Best Practices](using/best-practices/best-practices.md)** — Production-ready patterns
+
 ## Key capabilities
 
 | Capability | Description |
 | ---------- | ----------- |
-| **AI Email Automation** | Claude AI-powered auto-replies, email intelligence, and smart categorization |
-| **StreamBoost** | YouTube live stream detection with cross-platform announcements to Discord, X, Instagram, Facebook |
-| **AI Operations Copilot** | Natural language chat interface for email summaries, lead tracking, and task management |
-| **Calendar & Scheduling** | Full calendar with Cal.com integration, meeting detection from emails |
-| **Task Management** | Convert emails to tasks with priorities, assignments, and due dates |
-| **Digital Audits** | AI-powered security and digital audit workflows |
-| **n8n Workflows** | Automated IMAP → AI → SMTP → Database pipelines with visual workflow builder |
+| **[AI Email Automation](using/email-automation/overview.md)** | Claude AI-powered auto-replies, email intelligence, and smart categorization |
+| **[StreamBoost](using/streamboost/overview.md)** | YouTube live stream detection with cross-platform announcements to Discord, X, Instagram, Facebook |
+| **[AI Operations Copilot](using/ai-copilot/overview.md)** | Natural language chat interface for email summaries, lead tracking, and task management |
+| **[Calendar & Scheduling](using/calendar/overview.md)** | Full calendar with Cal.com integration, meeting detection from emails |
+| **[Task Management](using/tasks/overview.md)** | Convert emails to tasks with priorities, assignments, and due dates |
+| **[Digital Audits](using/digital-audits/overview.md)** | AI-powered security and digital audit workflows |
+| **[n8n Workflows](integrations/n8n.md)** | Automated IMAP → AI → SMTP → Database pipelines with visual workflow builder |
 
 ## Tech stack
 

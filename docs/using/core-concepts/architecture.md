@@ -163,3 +163,9 @@ graph LR
 | Backend   | VPS with PM2 |
 | Database  | PostgreSQL (remote) |
 | Workflows | Self-hosted n8n |
+
+## Related pages
+
+- [Core Concepts](concepts.md) — Domain model and key abstractions
+- [Database Schema](database.md) — PostgreSQL tables and relationships
+- [API Reference](../../api/index.md) — REST API endpoints

@@ -23,6 +23,14 @@ description: Contributing to Convergio AI — setup, guidelines, and design syst
 
     [:octicons-arrow-right-24: Design system](design-system.md)
 
+-   :material-history:{ .lg .middle } **Changelog**
+
+    ---
+
+    Release history and version notes.
+
+    [:octicons-arrow-right-24: Changelog](changelog.md)
+
 </div>
 
 ## Available scripts

@@ -60,3 +60,9 @@ n8n workflows automate background processes:
 - **2FA** uses TOTP with backup codes
 - **API keys** use a `cai_` prefix with hashed storage
 - **Login history** tracks all authentication attempts
+
+## Related pages
+
+- [Architecture](architecture.md) — System design and data flow
+- [Database Schema](database.md) — PostgreSQL tables and relationships
+- [Getting Started](../getting-started/quickstart.md) — Quick setup guide

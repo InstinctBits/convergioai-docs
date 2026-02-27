@@ -38,3 +38,9 @@ todo → in_progress → done
 | `POST` | `/api/tasks` | Create a new task |
 | `GET` | `/api/tasks/{id}` | Get task details |
 | `PATCH` | `/api/tasks/{id}` | Update status or priority |
+
+## Related pages
+
+- [Tasks API](../../api/tasks.md) — Task endpoint reference
+- [Email Automation](../email-automation/overview.md) — Auto-create tasks from emails
+- [AI Copilot](../ai-copilot/overview.md) — Manage tasks via natural language

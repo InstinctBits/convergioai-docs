@@ -57,3 +57,13 @@ Each inbox maps to a tag and its own AI knowledge base:
 - **Per-inbox view** — Filter by specific inbox (`/dashboard/inbox/hello`, etc.)
 - **Tag filtering** — Filter by auto-derived tags
 - **Status filtering** — Filter by read/unread, replied/pending status
+
+!!! tip "Quick setup"
+    The fastest way to get email automation running is to configure your IMAP credentials in `.env` and enable auto-reply in the settings panel.
+
+## Related pages
+
+- [AI Copilot](../ai-copilot/overview.md) — Chat interface for email summaries
+- [Email API](../../api/emails.md) — REST endpoints for email operations
+- [n8n Workflows](../../integrations/n8n.md) — Automated email pipelines
+- [Configuration](../getting-started/configuration.md) — IMAP/SMTP settings

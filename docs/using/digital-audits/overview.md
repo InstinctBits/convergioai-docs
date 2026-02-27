@@ -42,3 +42,8 @@ Results include:
 | `GET` | `/api/security-audits` | List security audits |
 | `POST` | `/api/security-audits` | Run security audit |
 | `GET` | `/api/security-audits/{id}` | Get security audit details |
+
+## Related pages
+
+- [AI Copilot](../ai-copilot/overview.md) — AI-powered analysis interface
+- [Best Practices](../best-practices/best-practices.md) — Security recommendations
