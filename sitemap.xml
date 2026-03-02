@@ -2,154 +2,170 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.digitechnomads.com/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/api/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/api/ai/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/api/authentication/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/api/calendar/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/api/emails/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/api/errors/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/api/settings/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/api/streamboost/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/api/tasks/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/development/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/development/changelog/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/development/contributing/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/development/design-system/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/hosting/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/hosting/deployment/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/hosting/self-hosting/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/integrations/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/integrations/calcom/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/integrations/n8n/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/integrations/platforms/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/plans/2026-02-28-documentation-overhaul-design/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/plans/2026-02-28-documentation-overhaul/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/using/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/using/ai-copilot/overview/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/using/best-practices/best-practices/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/using/calendar/overview/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.digitechnomads.com/using/campaignboost/overview/</loc>
+         <lastmod>2026-03-02</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.digitechnomads.com/using/contentboost/overview/</loc>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/using/core-concepts/architecture/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/using/core-concepts/concepts/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/using/core-concepts/database/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/using/digital-audits/overview/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/using/email-automation/overview/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.digitechnomads.com/using/free-tools/overview/</loc>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/using/getting-started/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/using/getting-started/configuration/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/using/getting-started/installation/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/using/getting-started/quickstart/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.digitechnomads.com/using/ideaboost/overview/</loc>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/using/streamboost/overview/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
          <loc>https://docs.digitechnomads.com/using/tasks/overview/</loc>
-         <lastmod>2026-02-27</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
 </urlset>
