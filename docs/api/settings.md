@@ -1,11 +1,11 @@
 ---
 title: Settings API
-description: API endpoints for user profile, security, billing, and token management.
+description: API endpoints for user profile, security, billing, and API key management.
 ---
 
 # Settings API
 
-All settings endpoints require JWT authentication.
+All settings endpoints require session authentication.
 
 ## Profile
 
@@ -21,15 +21,11 @@ All settings endpoints require JWT authentication.
 | Method | Endpoint | Description |
 | ------ | -------- | ----------- |
 | `POST` | `/api/settings/security/password` | Change password |
-| `GET` | `/api/settings/security/2fa` | Get 2FA status |
-| `POST` | `/api/settings/security/2fa/setup` | Initialize 2FA (returns TOTP secret) |
-| `POST` | `/api/settings/security/2fa/verify` | Verify and enable 2FA |
-| `POST` | `/api/settings/security/2fa/disable` | Disable 2FA |
 | `GET` | `/api/settings/security/sessions` | List active sessions |
-| `DELETE` | `/api/settings/security/sessions/{id}` | Revoke a session |
+| `DELETE` | `/api/settings/security/sessions/:id` | Revoke a session |
 | `GET` | `/api/settings/security/api-keys` | List user API keys |
 | `POST` | `/api/settings/security/api-keys` | Create API key (`cai_` prefix) |
-| `DELETE` | `/api/settings/security/api-keys/{id}` | Revoke API key |
+| `DELETE` | `/api/settings/security/api-keys/:id` | Revoke API key |
 | `GET` | `/api/settings/security/login-history` | Login history (last 50) |
 
 ## Billing
@@ -54,5 +50,5 @@ All settings endpoints require JWT authentication.
 | `GET` | `/api/settings/tokens/history` | Usage history (paginated) |
 | `GET` | `/api/settings/tokens/alerts` | List usage alerts |
 | `POST` | `/api/settings/tokens/alerts` | Create alert |
-| `PATCH` | `/api/settings/tokens/alerts/{id}` | Update alert |
-| `DELETE` | `/api/settings/tokens/alerts/{id}` | Delete alert |
+| `PATCH` | `/api/settings/tokens/alerts/:id` | Update alert |
+| `DELETE` | `/api/settings/tokens/alerts/:id` | Delete alert |

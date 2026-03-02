@@ -7,7 +7,7 @@ description: Official documentation for Convergio AI — a unified omnichannel C
 
 **Unified Omnichannel CRM with AI-Powered Automation**
 
-Convergio AI is a modern, open-source platform that brings together email management, AI-powered automation, stream broadcasting, calendar scheduling, and workflow orchestration — all in one intelligent dashboard. Built with React, Express, and PostgreSQL, powered by Claude AI and n8n workflows.
+Convergio AI is a modern, open-source platform that brings together email management, AI-powered automation, stream broadcasting, calendar scheduling, free tools, and workflow orchestration — all in one intelligent dashboard. Built with React 19, Express 5, and PostgreSQL, powered by Claude AI with built-in automation.
 
 <div class="grid cards" markdown>
 
@@ -19,11 +19,11 @@ Convergio AI is a modern, open-source platform that brings together email manage
 
     [:octicons-arrow-right-24: Quickstart](using/getting-started/quickstart.md)
 
--   :material-robot-outline:{ .lg .middle } **Features**
+-   :material-robot-outline:{ .lg .middle } **Boost Suite**
 
     ---
 
-    AI email automation, StreamBoost, calendar, task management, and more.
+    CommBoost, WorkBoost, StreamBoost, Free Tools, Calendar, Digital Audits, and more.
 
     [:octicons-arrow-right-24: Explore features](using/index.md)
 
@@ -31,7 +31,7 @@ Convergio AI is a modern, open-source platform that brings together email manage
 
     ---
 
-    Complete REST API reference with 80+ endpoints for emails, AI, tasks, and streams.
+    Complete REST API reference with 67+ endpoints for emails, AI, tasks, and streams.
 
     [:octicons-arrow-right-24: API docs](api/index.md)
 
@@ -47,7 +47,7 @@ Convergio AI is a modern, open-source platform that brings together email manage
 
     ---
 
-    n8n workflows, Cal.com scheduling, and multi-platform posting.
+    Cal.com scheduling, n8n advanced workflows, and multi-platform posting.
 
     [:octicons-arrow-right-24: View integrations](integrations/index.md)
 
@@ -66,49 +66,52 @@ Convergio AI is a modern, open-source platform that brings together email manage
 New to Convergio AI? Follow this path:
 
 1. **[Quickstart](using/getting-started/quickstart.md)** — Get a running instance in 10 minutes
-2. **[Core Concepts](using/core-concepts/concepts.md)** — Understand the domain model
-3. **[Email Automation](using/email-automation/overview.md)** — Set up your first AI-powered inbox
-4. **[Best Practices](using/best-practices/best-practices.md)** — Production-ready patterns
+2. **[Core Concepts](using/core-concepts/concepts.md)** — Understand the Boost Suite and domain model
+3. **[CommBoost](using/email-automation/overview.md)** — Set up your first AI-powered inbox
+4. **[Free Tools](using/free-tools/overview.md)** — Try the AI Prompt Generator
+5. **[Best Practices](using/best-practices/best-practices.md)** — Production-ready patterns
 
 ## Key capabilities
 
 | Capability | Description |
 | ---------- | ----------- |
-| **[AI Email Automation](using/email-automation/overview.md)** | Claude AI-powered auto-replies, email intelligence, and smart categorization |
-| **[StreamBoost](using/streamboost/overview.md)** | YouTube live stream detection with cross-platform announcements to Discord, X, Instagram, Facebook |
-| **[AI Operations Copilot](using/ai-copilot/overview.md)** | Natural language chat interface for email summaries, lead tracking, and task management |
-| **[Calendar & Scheduling](using/calendar/overview.md)** | Full calendar with Cal.com integration, meeting detection from emails |
-| **[Task Management](using/tasks/overview.md)** | Convert emails to tasks with priorities, assignments, and due dates |
-| **[Digital Audits](using/digital-audits/overview.md)** | AI-powered security and digital audit workflows |
-| **[n8n Workflows](integrations/n8n.md)** | Automated IMAP → AI → SMTP → Database pipelines with visual workflow builder |
+| **[CommBoost — Email](using/email-automation/overview.md)** | Multi-inbox AI email management with built-in auto-replies, threading, and smart categorization |
+| **[WorkBoost — Tasks](using/tasks/overview.md)** | Kanban board with source tracking, priorities, and email-to-task conversion |
+| **[StreamBoost](using/streamboost/overview.md)** | YouTube live detection with milestones, story cards, and cross-platform announcements |
+| **[AI Copilot](using/ai-copilot/overview.md)** | Multi-model chat interface (Claude, Gemini, Qwen) for email summaries and operational insights |
+| **[Calendar](using/calendar/overview.md)** | Multi-view calendar with Cal.com integration and AI meeting detection |
+| **[Digital Audits](using/digital-audits/overview.md)** | AI-powered website security and performance audits |
+| **[Free Tools](using/free-tools/overview.md)** | AI Prompt Generator with multiple framework templates |
 
 ## Tech stack
 
 === "Frontend"
 
-    - **React 19** with TypeScript
-    - **Vite 6** build tooling
+    - **React 19.2** with TypeScript 5.9
+    - **Vite 7.2** build tooling
     - **Tabler Design System** with dark/light mode
-    - **Recharts** for analytics visualization
-    - **TipTap** rich text editor
+    - **Recharts 3.7** for analytics visualization
+    - **TipTap 3.20** rich text editor
 
 === "Backend"
 
-    - **Express 5** (Node.js 20+)
-    - **PostgreSQL** with `pg` driver
-    - **JWT** authentication with bcrypt
+    - **Express 5.2** (Node.js 22+)
+    - **PostgreSQL 15+** with `pg` driver
+    - **Better Auth 1.5** — cookie-based session authentication
     - **Swagger/OpenAPI** documentation
     - **Sharp** for image processing
 
 === "AI & Automation"
 
     - **Anthropic Claude** for AI responses
-    - **n8n** for workflow automation
+    - **Google Gemini** and **Qwen** as alternative models
+    - **Built-in email auto-responder** (cron-based, no external dependencies)
+    - **n8n** for advanced workflows (StreamBoost dispatching)
     - **IMAPFlow** for email synchronization
     - **Cal.com** for scheduling
 
 ---
 
 <div style="text-align: center; margin-top: 2rem; color: var(--md-default-fg-color--lighter); font-size: 0.8rem;" markdown>
-🔥 Ignited at [Instinct Bits Lab](https://instinctbits.com){ target="_blank" } · ⚡ Supercharged by [Digitech Nomads](https://digitechnomads.com){ target="_blank" }
+Ignited at [Instinct Bits Lab](https://instinctbits.com){ target="_blank" } | Supercharged by [Digitech Nomads](https://digitechnomads.com){ target="_blank" }
 </div>

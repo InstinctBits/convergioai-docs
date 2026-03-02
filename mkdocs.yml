@@ -224,12 +224,16 @@ nav:
           - Architecture: using/core-concepts/architecture.md
           - Concepts: using/core-concepts/concepts.md
           - Database Schema: using/core-concepts/database.md
-      - Email Automation: using/email-automation/overview.md
-      - AI Copilot: using/ai-copilot/overview.md
+      - CommBoost — Email: using/email-automation/overview.md
+      - WorkBoost — Tasks: using/tasks/overview.md
       - StreamBoost: using/streamboost/overview.md
+      - AI Copilot: using/ai-copilot/overview.md
       - Calendar & Scheduling: using/calendar/overview.md
-      - Task Management: using/tasks/overview.md
       - Digital Audits: using/digital-audits/overview.md
+      - Free Tools: using/free-tools/overview.md
+      - ContentBoost: using/contentboost/overview.md
+      - IdeaBoost: using/ideaboost/overview.md
+      - CampaignBoost: using/campaignboost/overview.md
       - Best Practices: using/best-practices/best-practices.md
 
   - Integrations:

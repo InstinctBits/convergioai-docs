@@ -1,69 +1,109 @@
 ---
-title: AI Email Automation
-description: Multi-inbox email management with AI-powered auto-replies and smart categorization.
+title: CommBoost — Email Management
+description: Multi-inbox email management with built-in AI auto-replies, threading, and smart categorization.
 ---
 
-# AI Email Automation (CommBoost)
+# CommBoost — Email Management
 
-CommBoost is Convergio AI's intelligent email management system. It connects to multiple IMAP inboxes, automatically categorizes incoming emails, generates AI-powered responses, and syncs everything through n8n workflows.
+CommBoost is Convergio AI's intelligent email management system. It connects to five IMAP inboxes, automatically categorizes incoming emails, generates AI-powered responses through a built-in auto-responder, and provides a full-featured email client in the dashboard.
 
 ## How it works
 
 ```mermaid
 sequenceDiagram
-    participant IMAP as Email Server
-    participant n8n as n8n Workflow
-    participant AI as Claude / Gemini
-    participant API as Express API
+    participant IMAP as IMAP Servers
+    participant Sync as IMAP Sync Service
     participant DB as PostgreSQL
+    participant Cron as Auto-Responder (3 min cron)
+    participant AI as Claude AI
+    participant SMTP as SMTP Pool
     participant UI as Dashboard
 
-    n8n->>IMAP: Fetch new emails (IMAP)
-    IMAP-->>n8n: New emails
-    n8n->>AI: Generate auto-reply
-    AI-->>n8n: Reply content
-    n8n->>API: POST /api/emails (webhook)
-    API->>DB: Save email + auto-reply + create task
-    n8n->>IMAP: Send reply (SMTP)
-    UI->>API: GET /api/emails
-    API-->>UI: Email list with replies
+    Sync->>IMAP: Fetch new emails
+    IMAP-->>Sync: New emails
+    Sync->>DB: Save emails + create tasks
+    Note over Sync,DB: Tag auto-derived from to_address
+
+    Cron->>DB: Fetch unresponded emails
+    DB-->>Cron: Emails without replies
+    Cron->>DB: Load inbox knowledge base
+    Cron->>AI: Generate contextual reply
+    AI-->>Cron: Reply content
+    Cron->>SMTP: Send reply (with threading headers)
+    Cron->>DB: Save auto_reply record
+
+    UI->>DB: GET /api/emails
+    DB-->>UI: Emails with thread view
 ```
+
+!!! info "Built-in automation"
+    The auto-responder runs directly within the Express server as a cron job every 3 minutes. No external workflow engine is required for core email automation.
 
 ## Multi-inbox system
 
-Each inbox maps to a tag and its own AI knowledge base:
+Each inbox maps to a tag, color, and its own AI knowledge base:
 
-| Inbox | Tag | Purpose | AI personality |
-| ----- | --- | ------- | -------------- |
-| `hello@` | Hello | Sales and new business leads | Professional, consultative |
-| `partners@` | Partners | Partnership inquiries | Collaborative, strategic |
-| `info@` | Info | Press and general information | Informative, media-friendly |
-| `support@` | Support | Client support tickets | Helpful, empathetic |
-| `neo@` | Neo | Technical inquiries | Technical, precise |
+| Inbox | Email | Tag | Color | Purpose | Knowledge Base |
+| ----- | ----- | --- | ----- | ------- | -------------- |
+| Hello | hello@digitechnomads.com | Hello | :material-circle:{ style="color: #3b82f6" } Blue | Sales and new business | general.md, hello.md |
+| Partners | partners@digitechnomads.com | Partners | :material-circle:{ style="color: #c084fc" } Purple | Partnership requests | general.md, partners.md |
+| Info | info@digitechnomads.com | Info | :material-circle:{ style="color: #22d3ee" } Cyan | Press and media | general.md, info.md |
+| Support | support@digitechnomads.com | Support | :material-circle:{ style="color: #fb923c" } Orange | Client support | general.md, support.md |
+| Neo | neo@digitechnomads.com | Neo | :material-circle:{ style="color: #10b981" } Green | Special projects | general.md, agent-prompts.md |
 
 ## Features
 
-- **Auto-categorization** — Emails are tagged automatically based on the recipient address
-- **AI auto-replies** — Claude or Gemini generates contextual responses using inbox-specific knowledge bases
-- **Email intelligence** — AI analysis endpoint provides insights on email content, urgency, and action items
+### Email management
+
+- **Auto-categorization** — Emails are tagged automatically based on the recipient address prefix
+- **Thread view** — Related emails are grouped into conversations using RFC 2822 Message-ID, In-Reply-To, and References headers
+- **Thread count badges** — See at a glance how many messages are in each conversation
+- **SafeEmailBody** — Emails are rendered in a sandboxed iframe with image blocking for security
 - **Compose and reply** — Rich text editor (TipTap) for composing and replying directly from the dashboard
-- **IMAP sync** — On-demand synchronization across all configured inboxes
+- **Attachment uploads** — Upload and send file attachments with emails
+- **IMAP sync** — On-demand synchronization across all configured inboxes via `POST /api/sync`
 - **Deduplication** — Unique `message_id` constraint prevents duplicate email storage
-- **Attachment handling** — Attachment metadata stored as JSONB
+
+### AI auto-responder
+
+The built-in auto-responder processes unresponded emails every 3 minutes:
+
+- **Per-inbox toggle** — Enable or disable auto-responses for each inbox independently
+- **Knowledge base context** — Each inbox loads its specific knowledge base files for contextual responses
+- **Claude AI generation** — Responses are generated using the active AI model with anti-injection prompts
+- **SMTP connection pooling** — Replies are sent through a pooled SMTP connection for reliability
+- **Threading headers** — All replies include proper Message-ID, In-Reply-To, and References headers
+
+!!! tip "Toggle auto-responses"
+    Use `POST /api/auto-responder/toggle` to enable/disable the auto-responder for specific inboxes. Check status with `GET /api/auto-responder/status`.
+
+### Email intelligence
+
+- **AI analysis** — `GET /api/ai/email-intelligence` provides insights on email content, urgency, and action items
+- **Draft generation** — `POST /api/ai/email-draft` generates reply drafts using the inbox knowledge base
+- **Multi-model support** — Switch between Claude, Gemini, and Qwen for different response quality/speed tradeoffs
 
 ## Dashboard views
 
 - **Unified inbox** — All emails across all inboxes in one view
-- **Per-inbox view** — Filter by specific inbox (`/dashboard/inbox/hello`, etc.)
+- **Per-inbox view** — Filter by specific inbox tag
 - **Tag filtering** — Filter by auto-derived tags
-- **Status filtering** — Filter by read/unread, replied/pending status
+- **Thread view** — Click an email to see the full conversation thread
+- **Email detail modal** — View the complete email with safe HTML rendering
 
-!!! tip "Quick setup"
-    The fastest way to get email automation running is to configure your IMAP credentials in `.env` and enable auto-reply in the settings panel.
+## Email provider configuration
+
+CommBoost connects to IMAP/SMTP servers. The default configuration uses Hostinger:
+
+| Protocol | Host | Port | Security |
+| -------- | ---- | ---- | -------- |
+| IMAP | imap.hostinger.com | 993 | SSL/TLS |
+| SMTP | smtp.hostinger.com | 465 | SSL/TLS |
+
+Each inbox requires its own set of IMAP credentials configured in the environment variables. See [Configuration](../getting-started/configuration.md) for details.
 
 ## Related pages
 
 - [AI Copilot](../ai-copilot/overview.md) — Chat interface for email summaries
 - [Email API](../../api/emails.md) — REST endpoints for email operations
-- [n8n Workflows](../../integrations/n8n.md) — Automated email pipelines
 - [Configuration](../getting-started/configuration.md) — IMAP/SMTP settings

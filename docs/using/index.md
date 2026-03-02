@@ -1,86 +1,104 @@
 ---
 title: Using Convergio AI
-description: Learn how to use Convergio AI — from first setup to advanced features.
+description: Explore the Boost Suite — CommBoost, WorkBoost, StreamBoost, Free Tools, and more.
 ---
 
 # Using Convergio AI
 
-Everything you need to get started and make the most of Convergio AI.
+Convergio AI organizes its capabilities into the **Boost Suite** — a collection of purpose-built modules that work together to manage your communications, content, and operations.
 
-## Learning path
+## The Boost Suite
 
 <div class="grid cards" markdown>
 
--   :material-lightning-bolt:{ .lg .middle } **Getting Started**
+-   :material-email-fast-outline:{ .lg .middle } **CommBoost — Email**
 
     ---
 
-    Install, configure, and launch your first instance.
+    Multi-inbox AI email management with built-in auto-replies, threading, and per-inbox knowledge bases.
 
-    [:octicons-arrow-right-24: Quickstart](getting-started/quickstart.md)
+    [:octicons-arrow-right-24: CommBoost](email-automation/overview.md)
 
--   :material-lightbulb-outline:{ .lg .middle } **Core Concepts**
-
-    ---
-
-    Understand the platform architecture, domain model, and database.
-
-    [:octicons-arrow-right-24: Core concepts](core-concepts/concepts.md)
-
--   :material-email-fast-outline:{ .lg .middle } **Email Automation**
+-   :material-clipboard-check-outline:{ .lg .middle } **WorkBoost — Tasks**
 
     ---
 
-    AI-powered email management with auto-replies and smart categorization.
+    Kanban board with drag-and-drop, source tracking, priorities, and email-to-task conversion.
 
-    [:octicons-arrow-right-24: Email automation](email-automation/overview.md)
-
--   :material-robot-outline:{ .lg .middle } **AI Copilot**
-
-    ---
-
-    Natural language interface for email summaries, lead tracking, and tasks.
-
-    [:octicons-arrow-right-24: AI Copilot](ai-copilot/overview.md)
+    [:octicons-arrow-right-24: WorkBoost](tasks/overview.md)
 
 -   :material-broadcast:{ .lg .middle } **StreamBoost**
 
     ---
 
-    YouTube live detection with cross-platform announcements.
+    YouTube live detection, AI caption generation, cross-platform posting, milestones, and story cards.
 
     [:octicons-arrow-right-24: StreamBoost](streamboost/overview.md)
 
--   :material-calendar-clock:{ .lg .middle } **Calendar & Scheduling**
+-   :material-calendar-month:{ .lg .middle } **Calendar & Scheduling**
 
     ---
 
-    Full calendar with Cal.com integration and meeting detection.
+    Multi-view calendar with Cal.com sync and AI meeting detection from emails.
 
     [:octicons-arrow-right-24: Calendar](calendar/overview.md)
-
--   :material-checkbox-marked-outline:{ .lg .middle } **Task Management**
-
-    ---
-
-    Convert emails to tasks with priorities, filters, and tracking.
-
-    [:octicons-arrow-right-24: Tasks](tasks/overview.md)
 
 -   :material-shield-search:{ .lg .middle } **Digital Audits**
 
     ---
 
-    AI-powered website and security audit workflows.
+    AI-powered website security, performance, SEO, and brand consistency analysis.
 
-    [:octicons-arrow-right-24: Digital audits](digital-audits/overview.md)
+    [:octicons-arrow-right-24: Digital Audits](digital-audits/overview.md)
 
--   :material-check-decagram:{ .lg .middle } **Best Practices**
+-   :material-robot-happy-outline:{ .lg .middle } **AI Copilot**
 
     ---
 
-    Production patterns for reliability, security, and performance.
+    Multi-model chat interface for email intelligence, draft generation, and operational insights.
 
-    [:octicons-arrow-right-24: Best practices](best-practices/best-practices.md)
+    [:octicons-arrow-right-24: AI Copilot](ai-copilot/overview.md)
+
+-   :material-tools:{ .lg .middle } **Free Tools**
+
+    ---
+
+    AI Prompt Generator with multiple framework templates — available without a subscription.
+
+    [:octicons-arrow-right-24: Free Tools](free-tools/overview.md)
 
 </div>
+
+## Coming Soon
+
+<div class="grid cards" markdown>
+
+-   :material-text-box-edit-outline:{ .lg .middle } **ContentBoost**
+
+    ---
+
+    AI content generation, cross-platform publishing, thumbnail creation, and analytics.
+
+    [:octicons-arrow-right-24: ContentBoost](contentboost/overview.md)
+
+-   :material-lightbulb-on-outline:{ .lg .middle } **IdeaBoost**
+
+    ---
+
+    Idea capture, AI-powered suggestions, link bookmarking, and performance tracking.
+
+    [:octicons-arrow-right-24: IdeaBoost](ideaboost/overview.md)
+
+-   :material-bullhorn-outline:{ .lg .middle } **CampaignBoost**
+
+    ---
+
+    Email campaign creation, contact management, templates, and campaign analytics.
+
+    [:octicons-arrow-right-24: CampaignBoost](campaignboost/overview.md)
+
+</div>
+
+## Getting started
+
+New to the platform? Start with the [Quickstart guide](getting-started/quickstart.md) to get a running instance in 10 minutes, then explore the modules above based on your needs.

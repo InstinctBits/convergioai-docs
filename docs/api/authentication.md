@@ -1,21 +1,49 @@
 ---
 title: Authentication
-description: JWT-based authentication for the Convergio AI API.
+description: Session-based authentication with Better Auth for the Convergio AI API.
 ---
 
 # Authentication
 
-Convergio AI uses JWT (JSON Web Tokens) with database-backed sessions for authentication.
+Convergio AI uses [Better Auth](https://www.better-auth.com/) for session-based authentication. All API routes under `/api/*` are protected by the `requireSession` middleware.
+
+!!! info "Key change in v3.0"
+    Convergio AI has migrated from JWT-based authentication to **cookie-based sessions** powered by Better Auth. There are no bearer tokens or refresh tokens. Authentication state is managed through secure HTTP-only cookies.
+
+## Authentication flow
+
+```mermaid
+sequenceDiagram
+    participant Client
+    participant API as Convergio AI API
+    participant Auth as Better Auth
+    participant DB as Database
+
+    Client->>API: POST /api/auth/sign-in/email
+    API->>Auth: Validate credentials
+    Auth->>DB: Create session record
+    DB-->>Auth: Session ID
+    Auth-->>API: Session + cookie
+    API-->>Client: 200 OK (Set-Cookie header)
+    Note over Client: Cookie stored automatically
+
+    Client->>API: GET /api/emails (with cookie)
+    API->>Auth: requireSession middleware
+    Auth->>DB: Validate session
+    DB-->>Auth: Session valid
+    Auth-->>API: User context injected
+    API-->>Client: 200 OK + data
+```
 
 ## Endpoints
 
-### Register
+### Sign up
 
 ```
-POST /api/auth/register
+POST /api/auth/sign-up/email
 ```
 
-Create a new user account.
+Create a new user account. An **organization** is automatically created for the user upon registration.
 
 === "Request"
 
@@ -27,26 +55,57 @@ Create a new user account.
     }
     ```
 
-=== "Response (201)"
+=== "Response (200)"
 
     ```json
     {
-      "token": "eyJhbGciOi...",
       "user": {
-        "id": 1,
+        "id": "usr_abc123",
         "email": "user@example.com",
-        "name": "John Doe"
+        "name": "John Doe",
+        "createdAt": "2026-03-01T12:00:00Z"
+      },
+      "session": {
+        "id": "ses_xyz789",
+        "expiresAt": "2026-03-08T12:00:00Z"
       }
     }
     ```
 
-### Login
+    The response includes a `Set-Cookie` header with a secure, HTTP-only session cookie.
+
+=== "cURL"
+
+    ```bash
+    curl -X POST http://localhost:3001/api/auth/sign-up/email \
+      -H "Content-Type: application/json" \
+      -c cookies.txt \
+      -d '{"email": "user@example.com", "password": "securepassword", "name": "John Doe"}'
+    ```
+
+=== "JavaScript"
+
+    ```javascript
+    const response = await fetch("http://localhost:3001/api/auth/sign-up/email", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      credentials: "include",
+      body: JSON.stringify({
+        email: "user@example.com",
+        password: "securepassword",
+        name: "John Doe",
+      }),
+    });
+    const data = await response.json();
+    ```
+
+### Sign in
 
 ```
-POST /api/auth/login
+POST /api/auth/sign-in/email
 ```
 
-Authenticate with email and password. Returns a JWT and refresh token.
+Authenticate with email and password. Returns a session cookie.
 
 === "Request"
 
@@ -61,52 +120,124 @@ Authenticate with email and password. Returns a JWT and refresh token.
 
     ```json
     {
-      "token": "eyJhbGciOi...",
-      "refreshToken": "eyJhbGciOi...",
       "user": {
-        "id": 1,
+        "id": "usr_abc123",
         "email": "user@example.com",
         "name": "John Doe"
+      },
+      "session": {
+        "id": "ses_xyz789",
+        "expiresAt": "2026-03-08T12:00:00Z"
       }
     }
     ```
 
-### Refresh token
+=== "cURL"
+
+    ```bash
+    curl -X POST http://localhost:3001/api/auth/sign-in/email \
+      -H "Content-Type: application/json" \
+      -c cookies.txt \
+      -d '{"email": "user@example.com", "password": "securepassword"}'
+    ```
+
+### Get session
 
 ```
-POST /api/auth/refresh
+GET /api/auth/get-session
 ```
 
-Exchange a refresh token for a new access token.
+Retrieve the current authenticated session and user details.
 
-### Logout
+=== "Response (200)"
+
+    ```json
+    {
+      "user": {
+        "id": "usr_abc123",
+        "email": "user@example.com",
+        "name": "John Doe"
+      },
+      "session": {
+        "id": "ses_xyz789",
+        "expiresAt": "2026-03-08T12:00:00Z"
+      }
+    }
+    ```
+
+=== "Response (401)"
+
+    ```json
+    {
+      "error": "Not authenticated"
+    }
+    ```
+
+### Sign out
 
 ```
-POST /api/auth/logout
+POST /api/auth/sign-out
 ```
 
-Destroy the current session. Requires JWT.
+Destroy the current session and clear the session cookie.
 
-### Get current user
+## Google OAuth
 
-```
-GET /api/auth/me
-```
-
-Returns the authenticated user's profile. Requires JWT.
-
-## Using the token
-
-Include the JWT in the `Authorization` header:
+Convergio AI supports Google OAuth for single sign-on:
 
 ```
-Authorization: Bearer eyJhbGciOi...
+GET /api/auth/sign-in/social?provider=google
 ```
+
+The OAuth flow redirects through Google's consent screen. After authorization, a session cookie is set and the user is redirected to the application.
+
+## Using authentication
+
+All authenticated requests must include the session cookie:
+
+=== "JavaScript (fetch)"
+
+    ```javascript
+    const response = await fetch("http://localhost:3001/api/emails", {
+      credentials: "include",
+    });
+    ```
+
+=== "cURL"
+
+    ```bash
+    # Save cookies on login
+    curl -X POST http://localhost:3001/api/auth/sign-in/email \
+      -H "Content-Type: application/json" \
+      -c cookies.txt \
+      -d '{"email": "user@example.com", "password": "securepassword"}'
+
+    # Use cookies for subsequent requests
+    curl http://localhost:3001/api/emails -b cookies.txt
+    ```
+
+=== "Python"
+
+    ```python
+    import requests
+
+    session = requests.Session()
+    session.post("http://localhost:3001/api/auth/sign-in/email", json={
+        "email": "user@example.com",
+        "password": "securepassword",
+    })
+
+    # Session cookies are stored automatically
+    emails = session.get("http://localhost:3001/api/emails")
+    ```
 
 ## Security model
 
-- JWT + database session double-check (valid JWT AND active session)
-- Session revocation is instant (delete session record)
-- Refresh tokens for seamless token renewal
-- Password hashing with bcrypt (cost factor 10)
-- Optional 2FA via TOTP with backup codes
+| Feature | Details |
+| ------- | ------- |
+| **Session storage** | Database-backed sessions with configurable expiration |
+| **Cookie security** | `HttpOnly`, `Secure`, `SameSite=Lax` |
+| **Password hashing** | bcrypt with configurable cost factor |
+| **Session revocation** | Instant — deleting the session record invalidates access |
+| **OAuth providers** | Google (additional providers configurable) |
+| **Organizations** | Auto-created on signup with member/invitation management |

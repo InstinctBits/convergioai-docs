@@ -1,6 +1,6 @@
 ---
 title: Installation
-description: Detailed installation guide for Convergio AI with Node.js, Docker, and n8n setup.
+description: Detailed installation guide for Convergio AI with Node.js, Docker, and PM2 setup.
 ---
 
 # Installation
@@ -9,7 +9,7 @@ description: Detailed installation guide for Convergio AI with Node.js, Docker, 
 
 | Component   | Requirement      |
 | ----------- | ---------------- |
-| Node.js     | 20.0 or higher   |
+| Node.js     | 22.0 or higher   |
 | PostgreSQL  | 15 or higher     |
 | npm         | 9.0 or higher    |
 | OS          | macOS, Linux, Windows |
@@ -35,15 +35,17 @@ createdb convergioai
 Initialize all schemas:
 
 ```bash
-npm run db:init
+node run-schema.js
 ```
 
-This executes four schema files in order:
+This executes six schema files:
 
 1. `schema.sql` — Core tables (emails, tasks, auto-replies, app settings)
-2. `schema-settings.sql` — Users, auth, billing, API keys, token management
-3. `schema-calendar.sql` — Calendar events, Cal.com settings
-4. `schema-streamboost.sql` — Stream state, announcements, platform credentials, captions
+2. `schema-better-auth.sql` — Better Auth tables (users, sessions, accounts, organizations)
+3. `schema-settings.sql` — User settings, API keys, email signatures
+4. `schema-calendar.sql` — Calendar events
+5. `schema-streamboost.sql` — Stream state, announcements, platform credentials, milestones
+6. `schema-threading.sql` — Email threading (Message-ID, In-Reply-To, References)
 
 ### Start the servers
 
@@ -69,8 +71,6 @@ docker-compose up -d
 
 ## Method 3: Production with PM2
 
-The repository includes a PM2 ecosystem config:
-
 ```bash
 # Install PM2 globally
 npm install -g pm2
@@ -84,32 +84,21 @@ pm2 start pm2.ecosystem.config.cjs
 
 ## n8n workflow setup (optional)
 
-n8n powers the automated email processing pipeline. To set it up:
+!!! info "n8n is optional in v3.0"
+    Core email automation now runs as a built-in service. n8n is only needed for advanced workflows like StreamBoost post dispatching and custom automations.
+
+To set up n8n:
 
 1. Install n8n ([self-hosted](https://docs.n8n.io/hosting/) or [cloud](https://n8n.io/cloud/))
-2. Import the workflow files from `n8n-workflows/`:
-   - `email-agent-workflow.json` — IMAP → AI → SMTP pipeline
-   - `calcom-calendar-sync.json` — Cal.com booking sync
-   - `digital-audit-workflow.json` — Security audit automation
-   - `01_YouTube_Live_Detector.json` — StreamBoost live detection
-   - `02_Cross_Posting_AI.json` — Multi-platform announcements
-3. Configure credentials in n8n for your email, Claude API, and database
+2. Import workflow files from `n8n-workflows/`
+3. Configure credentials in n8n
 4. Activate the workflows
 
 ## Verify installation
 
 ```bash
 # Check the API health
-curl http://localhost:3001/api/health
-```
-
-Expected response:
-
-```json
-{
-  "status": "ok",
-  "version": "3.0.0"
-}
+curl http://localhost:3001/
 ```
 
 ## Next steps
