@@ -91,16 +91,42 @@ The built-in auto-responder processes unresponded emails every 3 minutes:
 - **Thread view** — Click an email to see the full conversation thread
 - **Email detail modal** — View the complete email with safe HTML rendering
 
-## Email provider configuration
+### Read/unread tracking
 
-CommBoost connects to IMAP/SMTP servers. The default configuration uses Hostinger:
+- **Per-email read status** — Emails are tracked as read or unread with the `is_read` column
+- **Bulk mark read/unread** — Select multiple emails and mark them read or unread in one action via `PATCH /api/emails/read`
+- **Filter by status** — Filter the inbox view by Read, Unread, or All
+- **Auto-mark on open** — Opening an email detail view automatically marks it as read
 
-| Protocol | Host | Port | Security |
-| -------- | ---- | ---- | -------- |
-| IMAP | imap.hostinger.com | 993 | SSL/TLS |
-| SMTP | smtp.hostinger.com | 465 | SSL/TLS |
+## Inbox management
 
-Each inbox requires its own set of IMAP credentials configured in the environment variables. See [Configuration](../getting-started/configuration.md) for details.
+Since v3.3.0, inboxes are managed through the **Settings > Email Inboxes** UI instead of environment variables. Credentials are encrypted at rest using AES-256-GCM.
+
+### Adding an inbox
+
+1. Go to **Settings > Email Inboxes**
+2. Click **Add Inbox**
+3. Fill in the inbox details:
+    - **Name** — Display name (e.g., "Hello")
+    - **Email address** — Full email address
+    - **Tag** — Unique tag for categorization (must not be "General")
+    - **IMAP settings** — Host, port (default: 993), username, password
+    - **SMTP settings** — Host, port (default: 465), username, password
+4. Click **Test Connection** to verify both IMAP and SMTP
+5. Save the inbox
+
+### Connection testing
+
+Use `POST /api/inboxes/:id/test` to verify IMAP and SMTP connectivity. Returns success/failure for each protocol independently.
+
+### Security
+
+- Passwords are encrypted with **AES-256-GCM** using a key derived from `BETTER_AUTH_SECRET` via PBKDF2 (100,000 iterations)
+- Passwords are never returned in API responses
+- The last active inbox cannot be deleted
+
+!!! warning "Credential encryption key"
+    The `BETTER_AUTH_SECRET` environment variable is used to derive the encryption key. Changing this value will make existing stored credentials unreadable. You would need to re-add all inboxes.
 
 ## Related pages
 

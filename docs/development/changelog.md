@@ -12,6 +12,68 @@ and this project adheres to [Semantic Versioning](https://semver.org/){ target="
 
 ---
 
+## v3.3.2 — CommBoost Reply Fixes & CI/CD Hardening
+
+### Fixed
+
+- **Reply threading** — Replies now include `parent_message_id` and `references_chain` so they appear in the thread view
+- **Reply-to address** — Replying to a sent email now correctly targets the recipient instead of your own inbox
+- **Integer type error** — Fixed `in_reply_to` column type mismatch when sending replies
+- **Auth credentials** — Added missing `credentials: 'include'` to thread and auto-reply fetch calls for production
+
+### Changed
+
+- **CI/CD deployment** — Backend deploy script now preserves `.env.production` across `git reset --hard` to prevent production env vars from being wiped
+
+---
+
+## v3.3.1 — CommBoost Inbox Management & WorkBoost GitHub Integration
+
+### Added
+
+- **DB-backed inbox management** — Manage IMAP/SMTP inboxes via Settings UI instead of environment variables
+- **AES-256-GCM encryption** for stored inbox credentials, using `BETTER_AUTH_SECRET` as the key
+- **Inbox CRUD API** — `GET/POST/PATCH/DELETE /api/inboxes` with connection testing (`POST /api/inboxes/:id/test`)
+- **Email read/unread tracking** — `is_read` column with bulk mark read/unread via `PATCH /api/emails/read`
+- **Read/Unread/All filter** in CommBoost toolbar
+- **Linear-style inbox redesign** — List view with search, pagination, and full-page email detail
+- **Threaded replies** with proper RFC 2822 In-Reply-To and References headers
+- **AI reply indicator** on sidebar email list
+- **Dynamic sidebar inbox list** from `/api/inboxes`
+- **CommBoost tag pills** — Color-coded inbox badges
+- **WorkBoost GitHub integration** — OAuth connection, project switcher, dynamic Kanban board
+- **GitHub Settings page** — Manage GitHub connections and linked projects
+- **ContentBoost pagination** — Search and sorting for Recent Content
+
+### Removed
+
+- **Plunk integration** — All Plunk SMTP provider code removed (4 files deleted), replaced by direct inbox management
+
+### Changed
+
+- **CI/CD pipeline** — GitHub Actions for frontend + backend deployment
+- **VM-only deployment** — Migrated from Netlify to self-hosted
+
+---
+
+## v3.2.0
+
+### Added
+
+- StreamBoost platform credential management and posting
+- StreamBoost announcement system
+
+---
+
+## v3.1.0
+
+### Added
+
+- CampaignBoost scaffolding
+- Digital audit endpoints
+
+---
+
 ## v3.0.0 — Better Auth & Built-in Automation
 
 ### Breaking changes
@@ -56,8 +118,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/){ target="
 - `JWT_SECRET` environment variable (replaced by `BETTER_AUTH_SECRET`)
 - 2FA/TOTP support (to be re-implemented in a future release)
 
----
-
-## Unreleased
-
-- Initial documentation site launch
